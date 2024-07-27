@@ -1,20 +1,26 @@
 <template>
-  <div class="relative overflow-hidden">
-    <div class="carousel-container">
-      <div v-for="(image, index) in carouselImages" :key="index" v-show="activeSlide === index + 1" class="carousel-slide">
-        <div
-          class="carousel-image"
-          :style="{ backgroundImage: `url(${image})` }"
-        ></div>
+  <div class="container mx-auto px-4 py-8 md:px-6 lg:px-8">
+    <div class="relative overflow-hidden">
+      <div class="carousel-container">
+        <div v-for="(image, index) in carouselImages" :key="index" v-show="activeSlide === index + 1" class="carousel-slide">
+          <div
+            class="carousel-image"
+            :style="{ backgroundImage: `url(${image})` }"
+          ></div>
+        </div>
       </div>
-    </div>
 
-    <button @click="prevSlide" class="nav-button nav-button-left">
-      &lt;
-    </button>
-    <button @click="nextSlide" class="nav-button nav-button-right">
-      &gt;
-    </button>
+      <button @click="prevSlide" class="nav-button nav-button-left">
+        <svg class="nav-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+        </svg>
+      </button>
+      <button @click="nextSlide" class="nav-button nav-button-right">
+        <svg class="nav-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z"/>
+        </svg>
+      </button>
+    </div>
   </div>
 </template>
 
@@ -62,13 +68,15 @@ export default {
 }
 
 .carousel-slide {
-  width: 60vw;
-  margin: 0 10vw;
+  width: 100%;
+  max-width: 80vw;
+  margin: 0 auto;
 }
 
 .carousel-image {
   width: 100%;
-  height: 60vh;
+  height: 0;
+  padding-top: 56.25%;
   background-size: cover;
   background-position: center;
 }
@@ -90,14 +98,36 @@ export default {
   cursor: pointer;
 }
 
+.nav-icon {
+  width: 24px;
+  height: 24px;
+  fill: white;
+}
+
 .nav-button:hover {
   background-color: #d5472c;
 }
+
 .nav-button-left {
-  left: 22%;
+  left: 10%;
 }
 
 .nav-button-right {
-  right: 22%;
+  right: 10%;
+}
+
+@media (max-width: 768px) {
+  .carousel-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .nav-button-left {
+    left: 2%;
+  }
+
+  .nav-button-right {
+    right: 2%;
+  }
 }
 </style>
