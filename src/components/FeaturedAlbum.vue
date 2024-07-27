@@ -2,11 +2,9 @@
     <div>
       <section class="bg-[#0d1422]">
       <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
-        <!-- Single image covering the space of two previous images -->
         <div class="lg:col-span-1 flex items-center">
           <img class="w-full object-cover rounded-lg" src="https://i.imgur.com/zee13Cf.jpeg" alt="office content">
         </div>
-        <!-- Text content -->
         <div class="lg:col-span-1 font-light text-gray-500 sm:text-lg dark:text-gray-400">
           <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
             Featured Album <span class="font-extrabold highlight">"Lora Holliday"</span>

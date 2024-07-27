@@ -1,13 +1,15 @@
 <template>
-      <div class="container">
-        <div class="content">
-          <h1 class="bandname">Pirati</h1>
-          <p class="description">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit aliquam cumque similique corrupti quas ut ipsam fugit, ipsum perferendis officiis illo hic, maiores repellat est, minima unde quidem laudantium doloremque?
-          </p>
-        </div>
-      </div>
-  </template>
+  <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col justify-center items-center w-3/5 p-4 bg-transparent border border-white text-center text-white">
+    <div class="w-full">
+      <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold uppercase mb-4">
+        Pirati
+      </h1>
+      <p class="text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit aliquam cumque similique corrupti quas ut ipsam fugit, ipsum perferendis officiis illo hic, maiores repellat est, minima unde quidem laudantium doloremque?
+      </p>
+    </div>
+  </div>
+</template>
   
   <style scoped>
  
