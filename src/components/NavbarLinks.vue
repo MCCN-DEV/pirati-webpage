@@ -49,13 +49,16 @@ export default {
 </script>
 
 <style scoped>
-a:hover {
+a:hover:not(.svg-icon) {
   color: #d5472c;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #d5472c;
 }
 
 .svg-icon img {
   filter: invert(1);
   transition: transform 0.3s ease, filter 0.3s ease;
+  
 }
 
 .svg-icon:hover img {
