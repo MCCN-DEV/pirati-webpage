@@ -1,4 +1,9 @@
 <template>
+  <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
+    <div class="text-center mb-8">
+      <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Gale<span class="font-extrabold highlight">rija</span></h2>
+    </div>
+  </div>
   <div class="container mx-auto px-4 py-8 md:px-6 lg:px-8">
     <div class="relative overflow-hidden">
       <div class="carousel-container">
@@ -33,23 +38,34 @@ export default {
     return {
       activeSlide: 1,
       carouselImages,
+      timer: null, // Timer reference
     };
   },
   methods: {
+    startAutoScroll() {
+      if (this.timer) {
+        clearInterval(this.timer); 
+      }
+      this.timer = setInterval(() => {
+        this.nextSlide();
+      }, 8000);
+    },
     prevSlide() {
       this.activeSlide = this.activeSlide === 1 ? this.carouselImages.length : this.activeSlide - 1;
+      this.startAutoScroll(); 
     },
     nextSlide() {
       this.activeSlide = this.activeSlide === this.carouselImages.length ? 1 : this.activeSlide + 1;
-    },
-    autoScroll() {
-      setInterval(() => {
-        this.nextSlide();
-      }, 8000); 
+      this.startAutoScroll(); 
     },
   },
   created() {
-    this.autoScroll();
+    this.startAutoScroll(); 
+  },
+  beforeDestroy() {
+    if (this.timer) {
+      clearInterval(this.timer); 
+    }
   },
 };
 </script>
@@ -60,8 +76,12 @@ export default {
   width: 100%;
 }
 
+.highlight {
+  color: #d5472c;
+}
+
 .carousel-container {
-  background-color: #0d1422;
+  background-color: transparent;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -85,7 +105,7 @@ export default {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: #0d1422;
+  background-color: #d5472c;
   font-weight: 700;
   color: white;
   border: none;
@@ -102,10 +122,6 @@ export default {
   width: 24px;
   height: 24px;
   fill: white;
-}
-
-.nav-button:hover {
-  background-color: #d5472c;
 }
 
 .nav-button-left {

@@ -7,6 +7,7 @@
     <HeroSection/>
     <GallerySection/>
     <Carousel/>
+    <Footer/>
   </body>
 </template>
 
@@ -16,6 +17,7 @@ import Background from '../components/Background.vue';
 import HeroSection from '../components/HeroSection.vue';
 import GallerySection from '../components/Showcase.vue';
 import Carousel from '../components/Carousel.vue';
+import Footer from '../components/Footer.vue';
 export default {
   name: 'Home',
   components: {
@@ -23,7 +25,8 @@ export default {
     Background,
     HeroSection,
     GallerySection,
-    Carousel
+    Carousel,
+    Footer
   }
 }
 </script>
