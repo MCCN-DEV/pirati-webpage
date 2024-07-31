@@ -1,7 +1,9 @@
 <template>
   <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
     <div class="text-center mb-8">
-      <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Gale<span class="font-extrabold highlight">rija</span></h2>
+      <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+        Gale<span class="font-extrabold highlight">rija</span>
+      </h2>
     </div>
   </div>
   <div class="container mx-auto px-4 py-8 md:px-6 lg:px-8">
@@ -89,7 +91,7 @@ export default {
 
 .carousel-slide {
   width: 100%;
-  max-width: 80vw;
+  max-width: 70vw; /* Adjusted from 60vw to 70vw */
   margin: 0 auto;
 }
 
@@ -125,11 +127,11 @@ export default {
 }
 
 .nav-button-left {
-  left: 10%;
+  left: 5%; /* Moved closer to the center from 10% to 5% */
 }
 
 .nav-button-right {
-  right: 10%;
+  right: 5%; /* Moved closer to the center from 10% to 5% */
 }
 
 @media (max-width: 768px) {
