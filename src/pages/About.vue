@@ -5,8 +5,8 @@
     </header>
     <div class="background-about"></div>
     <main>
-      <div class="content">
-        <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+      <div class="content text-gray-400">
+        <h2 class="mb-4 text-4xl tracking-tight font-extrabold dark:text-white">
           About <span class="font-extrabold highlight">Us</span>
         </h2>
         <p class="mb-4 centered-paragraph">
@@ -64,7 +64,7 @@ export default {
 }
 
 .highlight {
-  color: #d5472c; 
+  color: var(--color-highlight); 
 }
 
 .centered-paragraph {

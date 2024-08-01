@@ -1,6 +1,6 @@
 <template>
     <div>
-      <section id="albums" class="bg-[transparent]">
+      <section id="albums">
       <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
         <div class="lg:col-span-1 flex items-center">
           <img class="w-full object-cover rounded-lg" src="https://i.imgur.com/zee13Cf.jpeg" alt="office content">
@@ -30,7 +30,7 @@
   </script>
   <style scoped>
     .highlight {
-        color: #d5472c;
+        color: var(--color-highlight);
     }
   </style>
   

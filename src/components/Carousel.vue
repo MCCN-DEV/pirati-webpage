@@ -100,7 +100,7 @@ export default {
 }
 
 .highlight {
-  color: #d5472c;
+  color: var(--color-highlight);
 }
 
 .modern-carousel {
@@ -150,7 +150,7 @@ export default {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: #d5472c;
+  background-color: var(--color-highlight);
   color: white;
   border: none;
   border-radius: 50%;
@@ -164,7 +164,7 @@ export default {
 }
 
 .nav-button:hover {
-  background-color: #c94b32;
+  background-color: var(--color-highlight-hover);
 }
 
 .nav-icon {

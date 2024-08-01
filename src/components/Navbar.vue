@@ -40,19 +40,13 @@ export default {
 </script>
 
 <style scoped>
-nav {
-  background-color: #0d1422;
-}
 
 nav a {
   color: #ffffff;
 }
 
 nav a:hover {
-  color: #d5472c;
-}
-
-header svg {
-  stroke: #ffffff;
+  color: var(--color-highlight);
+  transition: 0.3s ease;
 }
 </style>

@@ -56,9 +56,9 @@ export default {
 
 <style scoped>
 a:hover:not(.svg-icon) {
-  color: #d5472c;
+  color: var(--color-highlight);
   padding-bottom: 5px;
-  border-bottom: 2px solid #d5472c;
+  border-bottom: 2px solid var(--color-highlight)
 }
 
 .svg-icon img {

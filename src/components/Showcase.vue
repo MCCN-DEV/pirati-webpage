@@ -20,6 +20,6 @@ export default {
 
 <style scoped>
 .highlight {
-    color: #d5472c;
+    color: var(--color-highlight);
 }
 </style>
