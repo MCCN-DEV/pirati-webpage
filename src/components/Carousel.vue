@@ -1,12 +1,12 @@
 <template>
   <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
     <div class="text-center mb-8">
-      <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+      <h2 id="gallery" class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
         Gale<span class="font-extrabold highlight">rija</span>
       </h2>
     </div>
   </div>
-  <div class="container mx-auto px-4 py-8 md:px-6 lg:px-8">
+  <div  class="container mx-auto px-4 py-8 md:px-6 lg:px-8">
     <div class="relative overflow-hidden shadow-carousel modern-carousel">
       <div class="carousel-container">
         <div

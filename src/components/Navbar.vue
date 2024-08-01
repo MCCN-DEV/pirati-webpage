@@ -3,7 +3,7 @@
     <section class="relative mx-auto">
       <nav class="flex justify-between items-center text-white w-screen">
         <div class="px-5 xl:px-12 py-6 flex w-full items-center justify-between">
-          <a class="text-3xl font-bold font-heading" href="#">
+          <a class="text-3xl font-bold font-heading" href="/">
             Pirati
           </a>
           <NavLinks :isMenuOpen="isMenuOpen" />

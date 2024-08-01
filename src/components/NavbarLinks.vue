@@ -1,11 +1,10 @@
 <template>
   <div class="w-full flex flex-col md:flex-row justify-between items-center">
     <ul class="hidden md:flex md:px-4 md:mx-auto md:font-semibold md:font-heading md:space-x-4 lg:space-x-6 xl:space-x-12">
-      <li><a href="#">Gallery</a></li>
-      <li><a href="#">Albums</a></li>
-      <li><a href="#">Radio</a></li>
-      <li><a href="#">Contact</a></li>
-      <li><a href="#">About Us</a></li>
+      <li><a href="#" @click.prevent="scrollToSection('gallery')">Gallery</a></li>
+      <li><a href="#" @click.prevent="scrollToSection('albums')">Albums</a></li>
+      <li><a href="#" @click.prevent="scrollToSection('contact')">Contact</a></li>
+      <li><a href="/about">About Us</a></li>
     </ul>
 
     <div class="hidden md:flex items-center space-x-3 lg:space-x-5">
@@ -27,10 +26,9 @@
     </div>
 
     <ul v-if="isMenuOpen" class="md:hidden absolute top-full right-0 w-full bg-[#0d1422]/80 text-white font-semibold z-50">
-      <li><a class="block px-4 py-2 hover:bg-[#1a2630]" href="#">Gallery</a></li>
-      <li><a class="block px-4 py-2 hover:bg-[#1a2630]" href="#">Albums</a></li>
-      <li><a class="block px-4 py-2 hover:bg-[#1a2630]" href="#">Radio</a></li>
-      <li><a class="block px-4 py-2 hover:bg-[#1a2630]" href="#">Contact</a></li>
+      <li><a class="block px-4 py-2 hover:bg-[#1a2630]" href="#" @click.prevent="scrollToSection('gallery')">Gallery</a></li>
+      <li><a class="block px-4 py-2 hover:bg-[#1a2630]" href="#" @click.prevent="scrollToSection('albums')">Albums</a></li>
+      <li><a class="block px-4 py-2 hover:bg-[#1a2630]" href="#" @click.prevent="scrollToSection('contact')">Contact</a></li>
       <li><a class="block px-4 py-2 hover:bg-[#1a2630]" href="#">About Us</a></li>
     </ul>
   </div>
@@ -43,6 +41,14 @@ export default {
     isMenuOpen: {
       type: Boolean,
       default: false,
+    },
+  },
+  methods: {
+    scrollToSection(sectionId) {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
     },
   },
 };
@@ -58,7 +64,6 @@ a:hover:not(.svg-icon) {
 .svg-icon img {
   filter: invert(1);
   transition: transform 0.3s ease, filter 0.3s ease;
-  
 }
 
 .svg-icon:hover img {
