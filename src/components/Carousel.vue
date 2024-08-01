@@ -7,13 +7,15 @@
     </div>
   </div>
   <div class="container mx-auto px-4 py-8 md:px-6 lg:px-8">
-    <div class="relative overflow-hidden">
+    <div class="relative overflow-hidden shadow-carousel modern-carousel">
       <div class="carousel-container">
-        <div v-for="(image, index) in carouselImages" :key="index" v-show="activeSlide === index + 1" class="carousel-slide">
-          <div
-            class="carousel-image"
-            :style="{ backgroundImage: `url(${image})` }"
-          ></div>
+        <div
+          v-for="(image, index) in carouselImages"
+          :key="index"
+          :class="{ 'carousel-slide-active': activeSlide === index + 1, 'carousel-slide': true }"
+          ref="carouselSlides"
+        >
+          <div class="carousel-image" :style="{ backgroundImage: `url(${image})` }"></div>
         </div>
       </div>
 
@@ -33,6 +35,7 @@
 
 <script>
 import { carouselImages } from '../data/constants';
+import { gsap } from 'gsap';
 
 export default {
   name: 'Carousel',
@@ -40,33 +43,51 @@ export default {
     return {
       activeSlide: 1,
       carouselImages,
-      timer: null, // Timer reference
+      timer: null,
     };
   },
   methods: {
     startAutoScroll() {
       if (this.timer) {
-        clearInterval(this.timer); 
+        clearInterval(this.timer);
       }
       this.timer = setInterval(() => {
         this.nextSlide();
       }, 8000);
     },
     prevSlide() {
+      this.animateSlideTransition(-1);
       this.activeSlide = this.activeSlide === 1 ? this.carouselImages.length : this.activeSlide - 1;
-      this.startAutoScroll(); 
+      this.startAutoScroll();
     },
     nextSlide() {
+      this.animateSlideTransition(1);
       this.activeSlide = this.activeSlide === this.carouselImages.length ? 1 : this.activeSlide + 1;
-      this.startAutoScroll(); 
+      this.startAutoScroll();
+    },
+    animateSlideTransition(direction) {
+      const slides = this.$refs.carouselSlides;
+      const activeSlideIndex = this.activeSlide - 1;
+      const nextSlideIndex = (activeSlideIndex + direction + slides.length) % slides.length;
+
+      gsap.fromTo(
+        slides[nextSlideIndex],
+        { opacity: 0, x: direction * 100 + '%' },
+        { opacity: 1, x: '0%', duration: 1 }
+      );
+      gsap.fromTo(
+        slides[activeSlideIndex],
+        { opacity: 1, x: '0%' },
+        { opacity: 0, x: -direction * 100 + '%', duration: 1 }
+      );
     },
   },
   created() {
-    this.startAutoScroll(); 
+    this.startAutoScroll();
   },
   beforeDestroy() {
     if (this.timer) {
-      clearInterval(this.timer); 
+      clearInterval(this.timer);
     }
   },
 };
@@ -82,17 +103,37 @@ export default {
   color: #d5472c;
 }
 
+.modern-carousel {
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.modern-carousel:hover {
+  transform: translateY(-3px);
+}
+
 .carousel-container {
   background-color: transparent;
   display: flex;
   justify-content: center;
   width: 100%;
+  position: relative;
 }
 
 .carousel-slide {
   width: 100%;
-  max-width: 70vw; /* Adjusted from 60vw to 70vw */
+  max-width: 70vw;
   margin: 0 auto;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.carousel-slide-active {
+  opacity: 1;
+  position: relative;
 }
 
 .carousel-image {
@@ -101,6 +142,8 @@ export default {
   padding-top: 56.25%;
   background-size: cover;
   background-position: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15), 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
 .nav-button {
@@ -108,30 +151,34 @@ export default {
   top: 50%;
   transform: translateY(-50%);
   background-color: #d5472c;
-  font-weight: 700;
   color: white;
   border: none;
   border-radius: 50%;
-  width: 48px;
-  height: 48px;
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+  background-color: #c94b32;
 }
 
 .nav-icon {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   fill: white;
 }
 
 .nav-button-left {
-  left: 5%; /* Moved closer to the center from 10% to 5% */
+  left: 5%;
 }
 
 .nav-button-right {
-  right: 5%; /* Moved closer to the center from 10% to 5% */
+  right: 5%;
 }
 
 @media (max-width: 768px) {
