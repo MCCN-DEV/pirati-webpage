@@ -19,6 +19,7 @@
 </template>
 
 <script>
+import { gsap } from 'gsap';
 import NavLinks from './NavbarLinks.vue';
 
 export default {
@@ -35,18 +36,56 @@ export default {
     toggleMenu() {
       this.isMenuOpen = !this.isMenuOpen;
     },
+    animateLinks() {
+      gsap.fromTo(
+        '.nav-link::after',
+        { scaleX: 0 },
+        {
+          scaleX: 1,
+          duration: 0.5,
+          ease: 'power2.out',
+        }
+      );
+    }
   },
+  mounted() {
+    // Trigger animations on hover for links with class 'nav-link'
+    const links = document.querySelectorAll('.nav-link');
+    links.forEach(link => {
+      link.addEventListener('mouseover', this.animateLinks);
+      link.addEventListener('mouseout', () => {
+        gsap.to(link.querySelector('::after'), { scaleX: 0, duration: 0.3 });
+      });
+    });
+  }
 };
 </script>
 
-<style scoped>
 
+<style scoped>
 nav a {
   color: #ffffff;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px; 
+  text-decoration: none; 
 }
 
-nav a:hover {
-  color: var(--color-highlight);
-  transition: 0.3s ease;
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--color-highlight);
+  transform: scaleX(0);
+  transform-origin: bottom left;
+  transition: transform 0.3s ease;
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
 }
 </style>
+
