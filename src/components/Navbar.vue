@@ -3,8 +3,15 @@
     <section class="relative mx-auto">
       <nav class="flex justify-between items-center text-white w-screen">
         <div class="px-5 xl:px-12 py-6 flex w-full items-center justify-between">
-          <a class="text-3xl font-bold font-heading" href="/">
-            Pirati
+          <a class="text-3xl font-bold font-heading letter-animation" href="/">
+            <span class="text-wrapper">
+              <span>P</span>
+              <span>i</span>
+              <span>r</span>
+              <span>a</span>
+              <span>t</span>
+              <span>i</span>
+            </span>
           </a>
           <NavLinks :isMenuOpen="isMenuOpen" />
           <button @click="toggleMenu" class="md:hidden text-white focus:outline-none ml-auto mr-4">
@@ -36,56 +43,73 @@ export default {
     toggleMenu() {
       this.isMenuOpen = !this.isMenuOpen;
     },
-    animateLinks() {
-      gsap.fromTo(
-        '.nav-link::after',
-        { scaleX: 0 },
-        {
-          scaleX: 1,
-          duration: 0.5,
-          ease: 'power2.out',
+    updateHighlight(event) {
+      const spans = document.querySelectorAll('.text-wrapper span');
+      const rect = event.target.getBoundingClientRect();
+      const x = event.clientX - rect.left;
+      const width = rect.width;
+      const percentage = x / width;
+      
+      spans.forEach((span, index) => {
+        const spanRect = span.getBoundingClientRect();
+        const spanWidth = spanRect.width;
+        const spanLeft = spanRect.left - rect.left;
+        const spanRight = spanLeft + spanWidth;
+        
+        if (x >= spanLeft && x <= spanRight) {
+          gsap.to(span, {
+            color: 'var(--color-highlight)', 
+            duration: 0.3,
+            ease: 'power2.out',
+          });
+        } else {
+          gsap.to(span, {
+            color: '#ffffff', 
+            duration: 0.3,
+            ease: 'power2.out',
+          });
         }
-      );
+      });
     }
   },
   mounted() {
-    // Trigger animations on hover for links with class 'nav-link'
-    const links = document.querySelectorAll('.nav-link');
-    links.forEach(link => {
-      link.addEventListener('mouseover', this.animateLinks);
-      link.addEventListener('mouseout', () => {
-        gsap.to(link.querySelector('::after'), { scaleX: 0, duration: 0.3 });
+    const textElement = document.querySelector('.letter-animation');
+    if (textElement) {
+      textElement.addEventListener('mousemove', this.updateHighlight);
+      textElement.addEventListener('mouseleave', () => {
+        gsap.to('.text-wrapper span', {
+          color: '#ffffff', 
+          duration: 0.3,
+          ease: 'power2.out',
+        });
       });
-    });
+    }
   }
 };
 </script>
-
 
 <style scoped>
 nav a {
   color: #ffffff;
   position: relative;
   display: inline-block;
-  padding-bottom: 5px; 
-  text-decoration: none; 
+  text-decoration: none;
+  font-weight: bold; 
 }
 
-.nav-link::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: var(--color-highlight);
-  transform: scaleX(0);
-  transform-origin: bottom left;
-  transition: transform 0.3s ease;
+.letter-animation {
+  display: inline-block;
 }
 
-.nav-link:hover::after {
-  transform: scaleX(1);
+.text-wrapper {
+  display: inline;
+}
+
+.text-wrapper span {
+  display: inline;
+  font-weight: bold; 
+  margin: 0; 
+  padding: 0; 
+  transition: color 0.3s ease;
 }
 </style>
-

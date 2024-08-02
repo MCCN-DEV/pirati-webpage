@@ -8,7 +8,7 @@
       <HeroSection />
       <Showcase class="showcase" />
       <FeaturedAlbum class="featured-album" />
-      <Carousel />
+      <Carousel class="carousel" />
       <Footer />
     </body>
   </div>

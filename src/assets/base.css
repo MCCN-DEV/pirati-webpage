@@ -44,8 +44,35 @@
 body {
   min-height: 100vh;
   color: var(--color-text);
-  background: var(--color-background);
-  transition:
+  background: linear-gradient(135deg, 
+  hsla(219, 43%, 12%, 1) 0%, 
+  hsla(220, 42%, 13%, 1) 20%, 
+  hsla(219, 41%, 13%, 1) 40%, 
+  hsla(219, 41%, 14%, 1) 60%, 
+  hsla(219, 40%, 14%, 1) 80%, 
+  hsla(220, 41%, 15%, 1) 90%, 
+  hsla(220, 45%, 9%, 1) 100%
+);
+background: -moz-linear-gradient(135deg, 
+  hsla(219, 43%, 12%, 1) 0%, 
+  hsla(220, 42%, 13%, 1) 20%, 
+  hsla(219, 41%, 13%, 1) 40%, 
+  hsla(219, 41%, 14%, 1) 60%, 
+  hsla(219, 40%, 14%, 1) 80%, 
+  hsla(220, 41%, 15%, 1) 90%, 
+  hsla(220, 45%, 9%, 1) 100%
+);
+background: -webkit-linear-gradient(135deg, 
+  hsla(219, 43%, 12%, 1) 0%, 
+  hsla(220, 42%, 13%, 1) 20%, 
+  hsla(219, 41%, 13%, 1) 40%, 
+  hsla(219, 41%, 14%, 1) 60%, 
+  hsla(219, 40%, 14%, 1) 80%, 
+  hsla(220, 41%, 15%, 1) 90%, 
+  hsla(220, 45%, 9%, 1) 100%
+);
+
+      transition:
     color 0.5s,
     background-color 0.5s;
   line-height: 1.6;

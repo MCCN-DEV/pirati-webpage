@@ -6,7 +6,7 @@
       </h2>
     </div>
   </div>
-  <div  class="container mx-auto px-4 py-8 md:px-6 lg:px-8">
+  <div class="container mx-auto px-4 py-8 md:px-6 lg:px-8">
     <div class="relative overflow-hidden shadow-carousel modern-carousel">
       <div class="carousel-container">
         <div
