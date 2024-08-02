@@ -15,7 +15,7 @@
           :class="{ 'carousel-slide-active': activeSlide === index + 1, 'carousel-slide': true }"
           ref="carouselSlides"
         >
-        <div class="carousel-image" :style="{ backgroundImage: `url(${image})` }"></div>
+          <div class="carousel-image" :style="{ backgroundImage: `url(${image})` }"></div>
         </div>
       </div>
 
@@ -46,9 +46,6 @@ export default {
       timer: null,
     };
   },
-  mounted() {
-    this.logImages();
-  },
   methods: {
     startAutoScroll() {
       if (this.timer) {
@@ -67,11 +64,6 @@ export default {
       this.animateSlideTransition(1);
       this.activeSlide = this.activeSlide === this.carouselImages.length ? 1 : this.activeSlide + 1;
       this.startAutoScroll();
-    },
-    logImages() {
-      this.carouselImages.forEach((image, index) => {
-        console.log(`Image ${index + 1}: ${image}`);
-      });
     },
     animateSlideTransition(direction) {
       const slides = this.$refs.carouselSlides;
