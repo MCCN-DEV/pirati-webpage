@@ -4,7 +4,7 @@
       <li><a class="animated-link" href="#" @click.prevent="scrollToSection('gallery')">Gallery</a></li>
       <li><a class="animated-link" href="#" @click.prevent="scrollToSection('albums')">Albums</a></li>
       <li><a class="animated-link" href="#" @click.prevent="scrollToSection('contact')">Contact</a></li>
-      <li><a class="animated-link" href="#">About Us</a></li>
+      <li><a class="animated-link" href="/about">About Us</a></li>
     </ul>
 
     <div class="hidden md:flex items-center space-x-3 lg:space-x-5">
