@@ -1,11 +1,10 @@
 <template>
   <div class="w-full flex flex-col md:flex-row justify-between items-center">
     <ul class="hidden md:flex md:px-4 md:mx-auto md:font-semibold md:font-heading md:space-x-4 lg:space-x-6 xl:space-x-12">
-      <li><a href="#">Gallery</a></li>
-      <li><a href="#">Albums</a></li>
-      <li><a href="#">Radio</a></li>
-      <li><a href="#">Contact</a></li>
-      <li><a href="#">About Us</a></li>
+      <li><a class="animated-link" href="#" @click.prevent="scrollToSection('gallery')">Gallery</a></li>
+      <li><a class="animated-link" href="#" @click.prevent="scrollToSection('albums')">Albums</a></li>
+      <li><a class="animated-link" href="#" @click.prevent="scrollToSection('contact')">Contact</a></li>
+      <li><a class="animated-link" href="#">About Us</a></li>
     </ul>
 
     <div class="hidden md:flex items-center space-x-3 lg:space-x-5">
@@ -27,14 +26,14 @@
     </div>
 
     <ul v-if="isMenuOpen" class="md:hidden absolute top-full right-0 w-full bg-[#0d1422]/80 text-white font-semibold z-50">
-      <li><a class="block px-4 py-2 hover:bg-[#1a2630]" href="#">Gallery</a></li>
-      <li><a class="block px-4 py-2 hover:bg-[#1a2630]" href="#">Albums</a></li>
-      <li><a class="block px-4 py-2 hover:bg-[#1a2630]" href="#">Radio</a></li>
-      <li><a class="block px-4 py-2 hover:bg-[#1a2630]" href="#">Contact</a></li>
-      <li><a class="block px-4 py-2 hover:bg-[#1a2630]" href="#">About Us</a></li>
+      <li class="w-full"><a class="block w-full px-4 py-2 hover:bg-[#1a2630] animated-link" href="#" @click.prevent="scrollToSection('gallery')">Gallery</a></li>
+      <li class="w-full"><a class="block w-full px-4 py-2 hover:bg-[#1a2630] animated-link" href="#" @click.prevent="scrollToSection('albums')">Albums</a></li>
+      <li class="w-full"><a class="block w-full px-4 py-2 hover:bg-[#1a2630] animated-link" href="#" @click.prevent="scrollToSection('contact')">Contact</a></li>
+      <li class="w-full"><a class="block w-full px-4 py-2 hover:bg-[#1a2630] animated-link" href="#">About Us</a></li>
     </ul>
   </div>
 </template>
+
 
 <script>
 export default {
@@ -45,20 +44,45 @@ export default {
       default: false,
     },
   },
+  methods: {
+    scrollToSection(sectionId) {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    },
+  },
 };
 </script>
 
 <style scoped>
-a:hover:not(.svg-icon) {
-  color: #d5472c;
+a.animated-link {
+  position: relative;
+  display: inline-block;
   padding-bottom: 5px;
-  border-bottom: 2px solid #d5472c;
+  text-decoration: none;
+}
+
+a.animated-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--color-highlight);
+  transform: scaleX(0);
+  transform-origin: bottom left;
+  transition: transform 0.3s ease;
+}
+
+a.animated-link:hover::after {
+  transform: scaleX(1);
 }
 
 .svg-icon img {
   filter: invert(1);
   transition: transform 0.3s ease, filter 0.3s ease;
-  
 }
 
 .svg-icon:hover img {

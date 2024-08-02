@@ -1,7 +1,7 @@
 <template>
   <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
     <div class="text-center mb-8">
-      <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+      <h2 id="gallery" class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
         Gale<span class="font-extrabold highlight">rija</span>
       </h2>
     </div>
@@ -100,7 +100,7 @@ export default {
 }
 
 .highlight {
-  color: #d5472c;
+  color: var(--color-highlight);
 }
 
 .modern-carousel {
@@ -150,7 +150,7 @@ export default {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: #d5472c;
+  background-color: var(--color-highlight);
   color: white;
   border: none;
   border-radius: 50%;
@@ -164,7 +164,7 @@ export default {
 }
 
 .nav-button:hover {
-  background-color: #c94b32;
+  background-color: var(--color-highlight-hover);
 }
 
 .nav-icon {

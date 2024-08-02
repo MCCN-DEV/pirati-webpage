@@ -17,6 +17,19 @@
   background-size: cover;
 }
 
+.background-about {
+  width: 100%;
+  height: 50vh; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: url(./image.jpg) no-repeat center top;
+  background-size: cover;
+  filter: blur(5px);
+  opacity: 0.3;
+}
+
 h1, h2, h3, h4, h5, h6, p, a {
   font-family: 'Poppins';
 }
