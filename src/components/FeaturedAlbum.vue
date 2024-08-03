@@ -1,6 +1,11 @@
 <template>
   <div>
-    <section id="albums">
+    <div id="albums" class="text-center mb-8">
+      <h2 id="gallery" class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+        Alb<span class="font-extrabold highlight">ums</span>
+      </h2>
+    </div>
+    <section>
       <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
         <div class="lg:col-span-1 flex items-center">
           <img
@@ -45,11 +50,13 @@ export default {
       {
         x: '0%', 
         opacity: 1,
+        duration: 1,
+        ease: 'power2.out',
         scrollTrigger: {
           trigger: '.image-animate',
           start: 'top 80%',
           end: 'top 50%',
-          scrub: true,
+          scrub: 0.5,
         },
       }
     );
@@ -64,6 +71,5 @@ export default {
 .image-animate {
   transform: translateX(-100%);
   opacity: 0;
-  transition: opacity 0.3s ease, transform 0.3s ease; 
 }
 </style>

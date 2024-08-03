@@ -3,8 +3,8 @@
     <ul class="hidden md:flex md:px-4 md:mx-auto md:font-semibold md:font-heading md:space-x-4 lg:space-x-6 xl:space-x-12">
       <li v-if="currentRoute !== '/about'"><a class="animated-link" href="#" @click.prevent="scrollToSection('gallery')">Gallery</a></li>
       <li v-if="currentRoute !== '/about'"><a class="animated-link" href="#" @click.prevent="scrollToSection('albums')">Albums</a></li>
-      <li><a class="animated-link" href="#" @click.prevent="scrollToSection('contact')">Contact</a></li>
-      <li><a class="animated-link" href="/about">About Us</a></li>
+      <li v-if="currentRoute !== '/about'"><a class="animated-link" href="#" @click.prevent="scrollToSection('contact')">Contact</a></li>
+      <li v-if="currentRoute !== '/about'"><a class="animated-link" href="/about">About Us</a></li>
     </ul>
 
     <div class="hidden md:flex items-center space-x-3 lg:space-x-5">
