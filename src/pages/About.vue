@@ -4,25 +4,34 @@
       <Navbar />
     </header>
     <div class="background-about"></div>
-    <main>
+    <main class="px-4 py-8">
       <div class="content text-gray-400">
         <h2 class="mb-4 text-4xl tracking-tight font-extrabold dark:text-white about-title">
           About <span class="font-extrabold highlight">Us</span>
         </h2>
-        <p class="mb-4 centered-paragraph about-paragraph letter-animation">
-          <span v-for="(char, index) in paragraph1" :key="index">{{ char }}</span>
-        </p>
+        <div class="paragraph-container flex flex-col md:flex-row md:items-start mb-8">
+          <p class="mb-4 centered-paragraph about-paragraph letter-animation flex-1">
+            <span v-for="(char, index) in paragraph1" :key="index">{{ char }}</span>
+          </p>
+          <img class="paragraph-img mt-4 mb-16 md:mt-0 md:ml-4" src="https://i.imgur.com/7o6gXKY.png" alt="Description for image 1" />
+        </div>
         <h4 class="mb-4 subtitle about-subtitle">Our Members</h4>
-        <p class="mb-4 centered-paragraph about-paragraph letter-animation">
-          <span v-for="(char, index) in paragraph2" :key="index">{{ char }}</span>
-        </p>
+        <div class="paragraph-container flex flex-col-reverse md:flex-row md:items-start mb-8">
+          <img class="paragraph-img mt-4 mb-8 md:mt-0 md:mr-4" src="https://i.imgur.com/7o6gXKY.png" alt="Description for image 2" />
+          <p class="mb-4 centered-paragraph about-paragraph letter-animation flex-1">
+            <span v-for="(char, index) in paragraph2" :key="index">{{ char }}</span>
+          </p>
+        </div>
         <h4 class="mb-4 subtitle about-subtitle">Our Albums</h4>
-        <p class="mb-4 centered-paragraph about-paragraph letter-animation">
-          <span v-for="(char, index) in paragraph3" :key="index">{{ char }}</span>
-        </p>
+        <div class="paragraph-container flex flex-col md:flex-row md:items-start mb-8">
+          <p class="mb-4 centered-paragraph about-paragraph letter-animation flex-1">
+            <span v-for="(char, index) in paragraph3" :key="index">{{ char }}</span>
+          </p>
+          <img class="paragraph-img mt-4 md:mt-0 md:ml-4" src="https://i.imgur.com/7o6gXKY.png" alt="Description for image 3" />
+        </div>
       </div>
     </main>
-    <Footer/>
+    <Footer />
   </div>
 </template>
 
@@ -48,24 +57,35 @@ export default {
     };
   },
   mounted() {
+  const paragraphs = document.querySelectorAll('.about-paragraph');
+  paragraphs.forEach((paragraph, index) => {
     gsap.fromTo(
-      '.about-title',
-      { opacity: 0, filter: 'blur(10px)' }, 
+      paragraph,
+      {
+        opacity: 0,
+        x: index === 1 ? -100 : (index === 2 ? 100 : 0),
+        filter: 'blur(10px)',
+      },
       {
         opacity: 1,
-        filter: 'blur(0px)', 
+        x: 0,
+        filter: 'blur(0px)',
         duration: 1,
         ease: 'power2.out',
         scrollTrigger: {
-          trigger: '.about-title',
+          trigger: paragraph,
           start: 'top 80%',
           end: 'top 50%',
           scrub: true,
         },
       }
     );
+  });
+
+  const images = document.querySelectorAll('.paragraph-img');
+  images.forEach(image => {
     gsap.fromTo(
-      '.about-paragraph',
+      image,
       { opacity: 0, filter: 'blur(10px)' },
       {
         opacity: 1,
@@ -73,36 +93,53 @@ export default {
         duration: 1,
         ease: 'power2.out',
         scrollTrigger: {
-          trigger: '.about-paragraph',
-          start: 'top 80%',
-          end: 'top 50%',
-          scrub: true,
-          stagger: 0.2, 
-        },
-      }
-    );
-    gsap.fromTo(
-      '.about-subtitle',
-      { opacity: 0, filter: 'blur(10px)' },
-      {
-        opacity: 1,
-        filter: 'blur(0px)',
-        duration: 1,
-        ease: 'power2.out',
-        scrollTrigger: {
-          trigger: '.about-subtitle',
+          trigger: image.previousElementSibling,
           start: 'top 80%',
           end: 'top 50%',
           scrub: true,
         },
       }
     );
-  },
+  });
+
+  gsap.fromTo(
+    '.about-title',
+    { opacity: 0, filter: 'blur(10px)' },
+    {
+      opacity: 1,
+      filter: 'blur(0px)',
+      duration: 1,
+      ease: 'power2.out',
+      scrollTrigger: {
+        trigger: '.about-title',
+        start: 'top 80%',
+        end: 'top 50%',
+        scrub: true,
+      },
+    }
+  );
+
+  gsap.fromTo(
+    '.about-subtitle',
+    { opacity: 0, filter: 'blur(10px)' },
+    {
+      opacity: 1,
+      filter: 'blur(0px)',
+      duration: 1,
+      ease: 'power2.out',
+      scrollTrigger: {
+        trigger: '.about-subtitle',
+        start: 'top 80%',
+        end: 'top 50%',
+        scrub: true,
+      },
+    }
+  );
+},
 };
 </script>
 
 <style scoped>
-
 .subtitle {
   text-align: left;
   margin: 1.5rem 0; 
@@ -134,5 +171,49 @@ export default {
   font-size: 1.125rem; 
   max-width: 700px; 
   margin: 1rem 0; 
+}
+
+.paragraph-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+  position: relative;
+  transform: translateX(0);
+}
+
+.paragraph-container img {
+  margin-left: 1rem; 
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.paragraph-container p {
+  flex: 1; 
+}
+
+.paragraph-container img.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (min-width: 768px) {
+  .paragraph-container {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 767px) {
+  .paragraph-container {
+    flex-direction: column;
+  }
+  .paragraph-container img {
+    width: 100%; 
+    margin-top: 1rem; 
+    margin-left: 0; 
+  }
 }
 </style>
