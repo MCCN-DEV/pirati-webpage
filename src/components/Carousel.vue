@@ -31,10 +31,18 @@
       </button>
     </div>
   </div>
+  <div class="container mx-auto px-4 py-8 md:px-6 lg:px-24">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+      <div v-for="(image, index) in displayedGridImages" :key="index" class="overflow-hidden rounded-lg shadow-lg">
+        <img :src="image" alt="" class="object-cover w-full h-full transition-transform duration-300 transform hover:scale-105">
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
 import { carouselImages } from '../data/constants';
+import { gridImages } from '../data/gridImages';
 import { gsap } from 'gsap';
 
 export default {
@@ -43,10 +51,20 @@ export default {
     return {
       activeSlide: 1,
       carouselImages,
+      gridImages,
       timer: null,
+      isMobile: window.innerWidth < 640,
     };
   },
+  computed: {
+    displayedGridImages() {
+      return this.isMobile ? this.gridImages.slice(0, 3) : this.gridImages;
+    }
+  },
   methods: {
+    handleResize() {
+      this.isMobile = window.innerWidth < 640;
+    },
     startAutoScroll() {
       if (this.timer) {
         clearInterval(this.timer);
@@ -84,11 +102,13 @@ export default {
   },
   created() {
     this.startAutoScroll();
+    window.addEventListener('resize', this.handleResize);
   },
   beforeDestroy() {
     if (this.timer) {
       clearInterval(this.timer);
     }
+    window.removeEventListener('resize', this.handleResize);
   },
 };
 </script>
@@ -181,7 +201,7 @@ export default {
   right: 5%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 640px) {
   .carousel-container {
     padding-left: 1rem;
     padding-right: 1rem;
@@ -193,6 +213,10 @@ export default {
 
   .nav-button-right {
     right: 2%;
+  }
+
+  .carousel-slide {
+    max-width: 100%;
   }
 }
 </style>
