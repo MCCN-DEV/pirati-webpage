@@ -44,12 +44,14 @@ export default {
       { opacity: 0, filter: 'blur(10px)' }, 
       {
         opacity: 1,
-        filter: 'blur(0px)', 
+        filter: 'blur(0px)',
+        duration: 1.5,
+        ease: 'power1.out',
         scrollTrigger: {
           trigger: '.showcase',
           start: 'top 80%',
           end: 'top 50%',
-          scrub: true,
+          scrub: 0.5,
         },
       }
     );
@@ -60,11 +62,13 @@ export default {
       {
         opacity: 1,
         filter: 'blur(0px)',
+        duration: 1.5,
+        ease: 'power1.out',
         scrollTrigger: {
           trigger: '.featured-album',
           start: 'top 80%',
           end: 'top 50%',
-          scrub: true,
+          scrub: 0.5,
         },
       }
     );

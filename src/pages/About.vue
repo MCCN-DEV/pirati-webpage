@@ -57,85 +57,85 @@ export default {
     };
   },
   mounted() {
-  const paragraphs = document.querySelectorAll('.about-paragraph');
-  paragraphs.forEach((paragraph, index) => {
-    gsap.fromTo(
-      paragraph,
-      {
-        opacity: 0,
-        x: index === 1 ? -100 : (index === 2 ? 100 : 0),
-        filter: 'blur(10px)',
-      },
-      {
-        opacity: 1,
-        x: 0,
-        filter: 'blur(0px)',
-        duration: 1,
-        ease: 'power2.out',
-        scrollTrigger: {
-          trigger: paragraph,
-          start: 'top 80%',
-          end: 'top 50%',
-          scrub: true,
+    const paragraphs = document.querySelectorAll('.about-paragraph');
+    paragraphs.forEach((paragraph, index) => {
+      gsap.fromTo(
+        paragraph,
+        {
+          opacity: 0,
+          x: index === 1 ? -100 : (index === 2 ? 100 : 0),
+          filter: 'blur(10px)',
         },
-      }
-    );
-  });
+        {
+          opacity: 1,
+          x: 0,
+          filter: 'blur(0px)',
+          duration: 1.5,
+          ease: 'power1.out',
+          scrollTrigger: {
+            trigger: paragraph,
+            start: 'top 80%',
+            end: 'top 50%',
+            scrub: 0.5,
+          },
+        }
+      );
+    });
 
-  const images = document.querySelectorAll('.paragraph-img');
-  images.forEach(image => {
+    const images = document.querySelectorAll('.paragraph-img');
+    images.forEach(image => {
+      gsap.fromTo(
+        image,
+        { opacity: 0, filter: 'blur(10px)' },
+        {
+          opacity: 1,
+          filter: 'blur(0px)',
+          duration: 1.5,
+          ease: 'power1.out',
+          scrollTrigger: {
+            trigger: image.previousElementSibling,
+            start: 'top 80%',
+            end: 'top 50%',
+            scrub: 0.5,
+          },
+        }
+      );
+    });
+
     gsap.fromTo(
-      image,
+      '.about-title',
       { opacity: 0, filter: 'blur(10px)' },
       {
         opacity: 1,
         filter: 'blur(0px)',
-        duration: 1,
-        ease: 'power2.out',
+        duration: 1.5,
+        ease: 'power1.out',
         scrollTrigger: {
-          trigger: image.previousElementSibling,
+          trigger: '.about-title',
           start: 'top 80%',
           end: 'top 50%',
-          scrub: true,
+          scrub: 0.5,
         },
       }
     );
-  });
 
-  gsap.fromTo(
-    '.about-title',
-    { opacity: 0, filter: 'blur(10px)' },
-    {
-      opacity: 1,
-      filter: 'blur(0px)',
-      duration: 1,
-      ease: 'power2.out',
-      scrollTrigger: {
-        trigger: '.about-title',
-        start: 'top 80%',
-        end: 'top 50%',
-        scrub: true,
-      },
-    }
-  );
-
-  gsap.fromTo(
-    '.about-subtitle',
-    { opacity: 0, filter: 'blur(10px)' },
-    {
-      opacity: 1,
-      filter: 'blur(0px)',
-      duration: 1,
-      ease: 'power2.out',
-      scrollTrigger: {
-        trigger: '.about-subtitle',
-        start: 'top 80%',
-        end: 'top 50%',
-        scrub: true,
-      },
-    }
-  );
-},
+    gsap.fromTo(
+      '.about-subtitle',
+      { opacity: 0, filter: 'blur(10px)' },
+      {
+        opacity: 1,
+        filter: 'blur(0px)',
+        duration: 1.5,
+        ease: 'power1.out',
+        scrollTrigger: {
+          trigger: '.about-subtitle',
+          start: 'top 80%',
+          end: 'top 50%',
+          scrub: 0.5,
+        },
+      }
+    );
+  },
 };
 </script>
 

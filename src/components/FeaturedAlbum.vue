@@ -50,11 +50,13 @@ export default {
       {
         x: '0%', 
         opacity: 1,
+        duration: 1,
+        ease: 'power2.out',
         scrollTrigger: {
           trigger: '.image-animate',
           start: 'top 80%',
           end: 'top 50%',
-          scrub: true,
+          scrub: 0.5,
         },
       }
     );
@@ -69,6 +71,5 @@ export default {
 .image-animate {
   transform: translateX(-100%);
   opacity: 0;
-  transition: opacity 0.3s ease, transform 0.3s ease; 
 }
 </style>
