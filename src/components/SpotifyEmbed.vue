@@ -2,7 +2,7 @@
   <div class="spotify-embed">
     <iframe
       style="border-radius: 12px;"
-      src="https://open.spotify.com/embed/album/7q0dHs3EZYLrydAKRktZ25?utm_source=generator"
+      :src=spotifyUrlProp
       width="100%"
       height="152"
       frameborder="0"
@@ -16,6 +16,9 @@
 
 <script>
 export default {
+  props:{
+    spotifyUrlProp: String
+  },
   name: 'SpotifyEmbed',
 };
 </script>
