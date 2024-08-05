@@ -29,6 +29,33 @@ export default {
         section.scrollIntoView({ behavior: 'smooth' });
       }
     },
+    updateHighlight(event) {
+      const chars = document.querySelectorAll('.pirati-title .char');
+      const rect = event.target.getBoundingClientRect();
+      const x = event.clientX - rect.left;
+      const width = rect.width;
+
+      chars.forEach((char) => {
+        const charRect = char.getBoundingClientRect();
+        const charWidth = charRect.width;
+        const charLeft = charRect.left - rect.left;
+        const charRight = charLeft + charWidth;
+
+        if (x >= charLeft && x <= charRight) {
+          gsap.to(char, {
+            color: 'var(--color-highlight)', 
+            duration: 0.3,
+            ease: 'power2.out',
+          });
+        } else {
+          gsap.to(char, {
+            color: '#ffffff', 
+            duration: 0.3,
+            ease: 'power2.out',
+          });
+        }
+      });
+    },
   },
   mounted() {
     gsap.fromTo(
@@ -55,41 +82,17 @@ export default {
       }
     );
 
-
-    const chars = document.querySelectorAll('.char');
-    const tl = gsap.timeline({ repeat: -1, repeatDelay: 1 });
-
-    tl.fromTo(
-      chars,
-      { color: '#FFFFFF' },
-      {
-        color: '#d5472c',
-        stagger: 0.1,
-        duration: 0.5,
-        ease: 'power1.inOut',
-      }
-    ).to(
-      chars,
-      {
-        color: '#FFFFFF',
-        stagger: 0.1,
-        duration: 0.5,
-        ease: 'power1.inOut',
-      },
-      "+=0.5"
-    );
-
-    gsap.fromTo(
-      '.down-arrow-button svg',
-      { rotate: -3 }, 
-      { 
-        rotate: 3, 
-        repeat: -1, 
-        yoyo: true, 
-        duration: 0.3, 
-        ease: 'power1.inOut'
-      }
-    );
+    const piratiTitle = document.querySelector('.pirati-title');
+    if (piratiTitle) {
+      piratiTitle.addEventListener('mousemove', this.updateHighlight);
+      piratiTitle.addEventListener('mouseleave', () => {
+        gsap.to('.pirati-title .char', {
+          color: '#ffffff', 
+          duration: 0.3,
+          ease: 'power2.out',
+        });
+      });
+    }
   },
 };
 </script>
@@ -104,6 +107,7 @@ export default {
 }
 
 .pirati-title {
+  cursor: pointer;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -113,6 +117,7 @@ export default {
   display: inline-block;
   font-size: inherit;
   font-weight: 700;
+  transition: color 0.3s ease;
 }
 
 .down-arrow-button {
