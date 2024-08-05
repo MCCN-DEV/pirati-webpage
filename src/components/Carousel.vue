@@ -160,7 +160,7 @@ export default {
   width: 100%;
   height: 0;
   padding-top: 56.25%;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15), 0 6px 20px rgba(0, 0, 0, 0.1);

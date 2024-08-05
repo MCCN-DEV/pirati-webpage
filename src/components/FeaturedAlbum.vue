@@ -39,7 +39,7 @@
         </div>
         <div class="lg:col-span-1 font-light text-gray-500 sm:text-lg dark:text-gray-400">
           <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
-            Featured Album <span class="font-extrabold highlight">"PIRATI Lora Holliday (First concert, Wine party, Kisač) LIVE"</span>
+            Featured Album <span class="font-extrabold highlight-live">"PIRATI Lora Holliday (First concert, Wine party, Kisač) LIVE"</span>
           </h2>
           <p class="mb-4">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam ducimus harum modi vero optio obcaecati similique
@@ -67,23 +67,25 @@ export default {
     SpotifyEmbed,
   },
   mounted() {
+  gsap.utils.toArray('.image-animate').forEach((element) => {
     gsap.fromTo(
-      '.image-animate',
-      { x: '-100%', opacity: 0 }, 
+      element,
+      { x: '-100%', opacity: 0 },
       {
-        x: '0%', 
+        x: '0%',
         opacity: 1,
         duration: 1,
         ease: 'power2.out',
         scrollTrigger: {
-          trigger: '.image-animate',
+          trigger: element,
           start: 'top 80%',
           end: 'top 50%',
           scrub: 0.5,
         },
       }
     );
-  },
+  });
+}
 };
 </script>
 
@@ -91,6 +93,11 @@ export default {
 .highlight {
   color: var(--color-highlight);
 }
+
+.highlight-live {
+  color: var(--color-highlight-live);
+}
+
 .image-animate {
   transform: translateX(-100%);
   opacity: 0;

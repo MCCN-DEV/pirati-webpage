@@ -9,25 +9,25 @@
         <h2 class="mb-4 text-4xl tracking-tight font-extrabold dark:text-white about-title">
           About <span class="font-extrabold highlight">Us</span>
         </h2>
-        <div class="paragraph-container flex flex-col md:flex-row md:items-start mb-8">
+        <div class="paragraph-container mb-8">
+          <img class="paragraph-img-right mt-4 mb-16 md:mt-0 paragraph-img rounded-lg" src="https://i.imgur.com/7o6gXKY.png" alt="Image" />
           <p class="mb-4 centered-paragraph about-paragraph letter-animation flex-1">
             <span v-for="(char, index) in paragraph1" :key="index">{{ char }}</span>
           </p>
-          <img class="paragraph-img mt-4 mb-16 md:mt-0 md:ml-4" src="https://i.imgur.com/7o6gXKY.png" alt="Description for image 1" />
         </div>
         <h4 class="mb-4 subtitle about-subtitle">Our Members</h4>
-        <div class="paragraph-container flex flex-col-reverse md:flex-row md:items-start mb-8">
-          <img class="paragraph-img mt-4 mb-8 md:mt-0 md:mr-4" src="https://i.imgur.com/7o6gXKY.png" alt="Description for image 2" />
+        <div class="paragraph-container mb-8">
+          <img class="paragraph-img-left mt-4 mb-8 md:mt-0 paragraph-img rounded-lg" src="https://i.imgur.com/7o6gXKY.png" alt="Image" />
           <p class="mb-4 centered-paragraph about-paragraph letter-animation flex-1">
             <span v-for="(char, index) in paragraph2" :key="index">{{ char }}</span>
           </p>
         </div>
         <h4 class="mb-4 subtitle about-subtitle">Our Albums</h4>
-        <div class="paragraph-container flex flex-col md:flex-row md:items-start mb-8">
+        <div class="paragraph-container mb-8">
+          <img class="paragraph-img-right mt-4 md:mt-0 paragraph-img rounded-lg" src="https://i.imgur.com/7o6gXKY.png" alt="Image" />
           <p class="mb-4 centered-paragraph about-paragraph letter-animation flex-1">
             <span v-for="(char, index) in paragraph3" :key="index">{{ char }}</span>
           </p>
-          <img class="paragraph-img mt-4 md:mt-0 md:ml-4" src="https://i.imgur.com/7o6gXKY.png" alt="Description for image 3" />
         </div>
       </div>
     </main>
@@ -174,16 +174,24 @@ export default {
 }
 
 .paragraph-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 2rem;
   position: relative;
   transform: translateX(0);
+  overflow: hidden;
 }
 
-.paragraph-container img {
-  margin-left: 1rem; 
+.paragraph-img-right {
+  float: right; 
+  margin: 0 0 2rem 1rem; 
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.paragraph-img-left {
+  float: left; 
+  margin: 0 1rem 2rem 0; 
   width: 300px;
   height: auto;
   object-fit: cover;
@@ -200,20 +208,11 @@ export default {
   transform: translateY(0);
 }
 
-@media (min-width: 768px) {
-  .paragraph-container {
-    flex-direction: row;
-  }
-}
-
 @media (max-width: 767px) {
-  .paragraph-container {
-    flex-direction: column;
-  }
-  .paragraph-container img {
+  .paragraph-img-right, .paragraph-img-left {
     width: 100%; 
-    margin-top: 1rem; 
-    margin-left: 0; 
+    margin: 1rem 0;
+    float: none;
   }
 }
 </style>
