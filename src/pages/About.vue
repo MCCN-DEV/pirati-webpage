@@ -181,7 +181,7 @@ export default {
 
 .paragraph-img-right {
   float: right; 
-  margin: 0 0 2rem 1rem; 
+  margin: 0 0 5% 5%; 
   width: 300px;
   height: auto;
   object-fit: cover;
@@ -191,7 +191,7 @@ export default {
 
 .paragraph-img-left {
   float: left; 
-  margin: 0 1rem 2rem 0; 
+  margin: 0 5% 5% 0; 
   width: 300px;
   height: auto;
   object-fit: cover;
@@ -211,7 +211,7 @@ export default {
 @media (max-width: 767px) {
   .paragraph-img-right, .paragraph-img-left {
     width: 100%; 
-    margin: 1rem 0;
+    margin: 1rem 0 2rem 0;
     float: none;
   }
 }

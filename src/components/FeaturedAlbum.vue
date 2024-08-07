@@ -9,9 +9,10 @@
       <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
         <div class="lg:col-span-1 flex items-center">
           <img
-            class="w-full object-cover rounded-lg image-animate"
+            class="w-full h-auto object-cover rounded-lg image-animate"
             src="https://i.imgur.com/zee13Cf.jpeg"
             alt="office content"
+            style="aspect-ratio: 1 / 1;"
           />
         </div>
         <div class="lg:col-span-1 font-light text-gray-500 sm:text-lg dark:text-gray-400">
@@ -32,9 +33,10 @@
       <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
         <div class="lg:col-span-1 flex items-center">
           <img
-            class="w-full object-cover rounded-lg image-animate"
-            src="https://i.imgur.com/fFM80VA.png"
+            class="w-full h-auto object-cover rounded-lg image-animate"
+            src="https://i.imgur.com/cEXgqvb.jpeg"
             alt="office content"
+            style="aspect-ratio: 1 / 1;"
           />
         </div>
         <div class="lg:col-span-1 font-light text-gray-500 sm:text-lg dark:text-gray-400">
@@ -101,5 +103,9 @@ export default {
 .image-animate {
   transform: translateX(-100%);
   opacity: 0;
+}
+
+img {
+  aspect-ratio: 1 / 1; 
 }
 </style>
