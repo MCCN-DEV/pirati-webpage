@@ -5,11 +5,12 @@
         Alb<span class="font-extrabold highlight">ums</span>
       </h2>
     </div>
-    <section>
+    
+    <section class="section-container">
       <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6 section-animate">
         <div class="lg:col-span-1 flex items-center">
           <img
-            class="w-full h-auto object-cover rounded-lg"
+            class="responsive-img w-full h-auto object-cover rounded-lg"
             src="https://i.imgur.com/zee13Cf.jpeg"
             alt="office content"
             style="aspect-ratio: 1 / 1;"
@@ -29,11 +30,11 @@
         </div>
       </div>
     </section>
-    <section>
+    <section class="section-container">
       <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6 section-animate">
         <div class="lg:col-span-1 flex items-center">
           <img
-            class="w-full h-auto object-cover rounded-lg"
+            class="responsive-img w-full h-auto object-cover rounded-lg"
             src="https://i.imgur.com/cEXgqvb.jpeg"
             alt="office content"
             style="aspect-ratio: 1 / 1;"
@@ -103,4 +104,18 @@ export default {
 img {
   aspect-ratio: 1 / 1;
 }
+
+.section-container {
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 640px) {
+  .section-container {
+    transform: scale(0.9);
+  }
+  .responsive-img {
+    transform: scale(0.9); 
+  }
+}
+
 </style>

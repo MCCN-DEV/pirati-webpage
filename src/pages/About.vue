@@ -6,7 +6,7 @@
     <div class="background-about"></div>
     <main class="px-4 py-8">
       <div class="content text-gray-400">
-        <h2 class="mb-4 text-4xl tracking-tight font-extrabold about-title">
+        <h2 class="mb-4 text-4xl tracking-tight font-extrabold about-title text-white">
           About <span class="font-extrabold highlight">Us</span>
         </h2>
         <div class="paragraph-container mb-8">
@@ -169,7 +169,7 @@ export default {
 .centered-paragraph {
   text-align: left;
   font-size: 1.125rem; 
-  max-width: 700px; 
+  max-width: 900px; 
   margin: 1rem 0; 
 }
 

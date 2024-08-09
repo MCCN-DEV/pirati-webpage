@@ -119,6 +119,7 @@ export default {
 
 .pirati-title {
   cursor: pointer;
+  user-select: none;
   text-align: center;
   display: flex;
   justify-content: center;
