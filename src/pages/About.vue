@@ -6,7 +6,7 @@
     <div class="background-about"></div>
     <main class="px-4 py-8">
       <div class="content text-gray-400">
-        <h2 class="mb-4 text-4xl tracking-tight font-extrabold dark:text-white about-title">
+        <h2 class="mb-4 text-4xl tracking-tight font-extrabold about-title">
           About <span class="font-extrabold highlight">Us</span>
         </h2>
         <div class="paragraph-container mb-8">
