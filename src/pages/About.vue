@@ -6,7 +6,7 @@
     <div class="background-about"></div>
     <main class="px-4 py-8">
       <div class="content text-gray-400">
-        <h2 class="mb-4 text-4xl tracking-tight font-extrabold dark:text-white about-title">
+        <h2 class="mb-4 text-4xl tracking-tight font-extrabold about-title text-white">
           About <span class="font-extrabold highlight">Us</span>
         </h2>
         <div class="paragraph-container mb-8">
@@ -169,7 +169,7 @@ export default {
 .centered-paragraph {
   text-align: left;
   font-size: 1.125rem; 
-  max-width: 700px; 
+  max-width: 900px; 
   margin: 1rem 0; 
 }
 
@@ -181,7 +181,7 @@ export default {
 
 .paragraph-img-right {
   float: right; 
-  margin: 0 0 2rem 1rem; 
+  margin: 0 0 5% 5%; 
   width: 300px;
   height: auto;
   object-fit: cover;
@@ -191,7 +191,7 @@ export default {
 
 .paragraph-img-left {
   float: left; 
-  margin: 0 1rem 2rem 0; 
+  margin: 0 5% 5% 0; 
   width: 300px;
   height: auto;
   object-fit: cover;
@@ -211,7 +211,7 @@ export default {
 @media (max-width: 767px) {
   .paragraph-img-right, .paragraph-img-left {
     width: 100%; 
-    margin: 1rem 0;
+    margin: 1rem 0 2rem 0;
     float: none;
   }
 }

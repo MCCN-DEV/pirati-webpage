@@ -3,8 +3,8 @@
     <header>
       <Navbar />
     </header>
+    <Background />
     <body>
-      <Background />
       <HeroSection />
       <Showcase class="showcase" />
       <FeaturedAlbum class="featured-album" />

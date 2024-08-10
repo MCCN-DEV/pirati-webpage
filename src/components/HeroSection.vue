@@ -81,7 +81,18 @@ export default {
         delay: 1.5, 
       }
     );
-
+    
+    gsap.fromTo(
+      '.down-arrow-button svg',
+      { rotate: -3 }, 
+      { 
+        rotate: 3, 
+        repeat: -1, 
+        yoyo: true, 
+        duration: 0.3, 
+        ease: 'power1.inOut'
+      }
+    );
     const piratiTitle = document.querySelector('.pirati-title');
     if (piratiTitle) {
       piratiTitle.addEventListener('mousemove', this.updateHighlight);
@@ -108,6 +119,7 @@ export default {
 
 .pirati-title {
   cursor: pointer;
+  user-select: none;
   text-align: center;
   display: flex;
   justify-content: center;
