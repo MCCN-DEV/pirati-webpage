@@ -39,7 +39,6 @@
     </div>
   </div>
 
-  <!-- Popup Modal -->
   <div v-if="isPopupOpen" class="popup-overlay" @click="closePopup">
     <div class="popup-content" @click.stop>
       <img :src="selectedImage" alt="" class="popup-image">
@@ -242,7 +241,6 @@ export default {
   }
 }
 
-/* Popup Styles */
 .popup-overlay {
   position: fixed;
   top: 0;

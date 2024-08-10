@@ -1,11 +1,10 @@
 <template>
   <div>
-    <div id="albums" class="text-center mb-8">
+    <div id="albums" class="text-center mb-8 mobile-mb-4">
       <h2 id="gallery" class="mb-4 text-5xl tracking-tight font-extrabold text-gray-900 text-white">
         Alb<span class="font-extrabold highlight">ums</span>
       </h2>
     </div>
-    
     <section class="section-container">
       <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6 section-animate">
         <div class="lg:col-span-1 flex items-center">
@@ -18,8 +17,9 @@
         </div>
         <div class="lg:col-span-1 font-light text-gray-500 sm:text-lg dark:text-gray-400">
           <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 text-white">
-            Featured Album <span class="font-extrabold highlight">"Lora Holliday"</span>
+            Featured Album
           </h2>
+          <p class="mb-4 font-extrabold highlight">"Lora Holliday"</p>
           <p class="mb-4">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam ducimus harum modi vero optio obcaecati similique
             molestiae doloremque ullam sapiente tempora dolores, corporis quas minus itaque culpa alias odit quo veniam ut
@@ -30,7 +30,8 @@
         </div>
       </div>
     </section>
-    <section class="section-container">
+
+    <section class="section-container mobile-mt-4">
       <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6 section-animate">
         <div class="lg:col-span-1 flex items-center">
           <img
@@ -42,8 +43,9 @@
         </div>
         <div class="lg:col-span-1 font-light text-gray-500 sm:text-lg dark:text-gray-400">
           <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 text-white">
-            Featured Album <span class="font-extrabold highlight-live">"PIRATI Lora Holliday (First concert, Wine party, Kisač) LIVE"</span>
+            Featured Album
           </h2>
+          <p class="mb-4 font-extrabold highlight-live">"PIRATI Lora Holliday (First concert, Wine party, Kisač) LIVE"</p>
           <p class="mb-4">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam ducimus harum modi vero optio obcaecati similique
             molestiae doloremque ullam sapiente tempora dolores, corporis quas minus itaque culpa alias odit quo veniam ut
@@ -56,6 +58,7 @@
     </section>
   </div>
 </template>
+
 
 <script>
 import { gsap } from 'gsap';
@@ -101,12 +104,14 @@ export default {
   color: var(--color-highlight-live);
 }
 
-img {
-  aspect-ratio: 1 / 1;
+p.highlight, p.highlight-live {
+  margin-top: 0; 
+  margin-bottom: 1rem; 
+  font-size: 1.5rem; 
 }
 
-.section-container {
-  transition: transform 0.3s ease;
+img {
+  aspect-ratio: 1 / 1;
 }
 
 @media (max-width: 640px) {
@@ -116,6 +121,13 @@ img {
   .responsive-img {
     transform: scale(0.9); 
   }
+  .mobile-mb-4 {
+    margin-bottom: -5rem;
+  }
+  .mobile-mt-4 {
+    margin-top: -5rem;
+  }
+
 }
 
 </style>

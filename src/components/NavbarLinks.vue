@@ -29,7 +29,7 @@
       <li class="w-full" v-if="currentRoute !== '/about'"><a class="block w-full px-4 py-2 hover:bg-[#1a2630] animated-link" href="#" @click.prevent="scrollToSection('gallery')">Gallery</a></li>
       <li class="w-full" v-if="currentRoute !== '/about'"><a class="block w-full px-4 py-2 hover:bg-[#1a2630] animated-link" href="#" @click.prevent="scrollToSection('albums')">Albums</a></li>
       <li class="w-full"><a class="block w-full px-4 py-2 hover:bg-[#1a2630] animated-link" href="#" @click.prevent="scrollToSection('contact')">Contact</a></li>
-      <li class="w-full"><a class="block w-full px-4 py-2 hover:bg-[#1a2630] animated-link" href="#">About Us</a></li>
+      <li class="w-full"><a class="block w-full px-4 py-2 hover:bg-[#1a2630] animated-link" href="/about">About Us</a></li>
     </ul>
   </div>
 </template>
