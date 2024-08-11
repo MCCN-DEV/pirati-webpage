@@ -3,25 +3,25 @@
     <div class="w-full px-4 md:px-20 py-4 md:py-8">
       <div class="flex flex-col md:flex-row md:items-center md:justify-between">
         <a href="#" class="flex items-center justify-center md:justify-start mb-4 md:mb-0 space-x-3 rtl:space-x-reverse w-full md:w-auto">
-          <span class="highlight self-center text-3xl font-semibold whitespace-nowrap dark:text-white">Pirati</span>
+          <span class="highlight self-center text-3xl font-semibold whitespace-nowrap text-white">Pirati</span>
         </a>
         <div class="flex flex-col md:flex-row md:items-start md:space-x-12 mt-4 md:mt-0">
           <div class="flex flex-col items-center md:items-start mb-4 md:mb-0">
             <h4 class="text-lg font-semibold text-gray-700 dark:text-gray-300">Contact</h4>
             <ul class="space-y-3 mt-2">
-              <li class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-300">+(381)000-000000</li>
-              <li class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-300">email@email.com</li>
-              <li class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-300">Contact</li>
-              <li class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-300">Privacy Policy</li>
+              <li class="text-gray-600 dark:text-gray-400 hover:text-white transition-colors duration-300">+(381)000-000000</li>
+              <li class="text-gray-600 dark:text-gray-400 hover:text-white transition-colors duration-300">email@email.com</li>
+              <li class="text-gray-600 dark:text-gray-400 hover:text-white transition-colors duration-300">Contact</li>
+              <li class="text-gray-600 dark:text-gray-400 hover:text-white transition-colors duration-300">Privacy Policy</li>
             </ul>
           </div>
           <div class="hidden md:block flex flex-col items-center md:items-start mb-4 md:mb-0">
             <h4 class="text-lg font-semibold text-gray-700 dark:text-gray-300">Quick Links</h4>
             <ul class="space-y-3 mt-2">
-              <li><a href="#gallery" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-300">Gallery</a></li>
-              <li><a href="#albums" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-300">Albums</a></li>
-              <li><a href="#radio" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-300">Radio</a></li>
-              <li><a href="#about" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-300">About Us</a></li>
+              <li><a href="#gallery" class="text-gray-600 dark:text-gray-400 hover:text-white transition-colors duration-300">Gallery</a></li>
+              <li><a href="#albums" class="text-gray-600 dark:text-gray-400 hover:text-white transition-colors duration-300">Albums</a></li>
+              <li><a href="#radio" class="text-gray-600 dark:text-gray-400 hover:text-white transition-colors duration-300">Radio</a></li>
+              <li><a href="#about" class="text-gray-600 dark:text-gray-400 hover:text-white transition-colors duration-300">About Us</a></li>
             </ul>
           </div>
           <div class="flex flex-col items-center md:items-start mb-4 md:mb-0">
@@ -49,7 +49,7 @@
       <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
       <div class="text-center">
         <span class="block text-sm text-gray-500 dark:text-gray-400">
-          © 2024 <a href="#" class="hover:text-gray-900 dark:hover:text-white transition-colors duration-300">MCCN</a>.
+          © 2024 <a href="#" class="hover:text-white transition-colors duration-300">MCCN</a>.
         </span>
       </div>
     </div>
