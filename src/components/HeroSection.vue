@@ -4,7 +4,11 @@
       <span v-for="(char, index) in 'Pirati'" :key="index" class="char">{{ char }}</span>
     </h1>
     <p class="text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed paragraph-text">
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit aliquam cumque similique corrupti quas ut ipsam fugit, ipsum perferendis officiis illo hic, maiores repellat est, minima unde quidem laudantium doloremque?
+      <p style="font-size: 40px;">JEDINI PIRATI KOJI SU ORIGINAL!</p>
+      <br/>
+      <i style="margin-top: 8px;">
+        Slušanje muzike grupe “PIRATI” može pozitivno uticati na zdravlje ljudi i životnu sredinu.
+      </i>
     </p>
   </div>
   <div class="absolute bottom-12 left-1/2 transform -translate-x-1/2">

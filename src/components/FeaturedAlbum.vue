@@ -19,12 +19,9 @@
           <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 text-white">
             Featured Album
           </h2>
-          <p class="mb-4 font-extrabold highlight">"Lora Holliday"</p>
-          <p class="mb-4">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam ducimus harum modi vero optio obcaecati similique
-            molestiae doloremque ullam sapiente tempora dolores, corporis quas minus itaque culpa alias odit quo veniam ut
-            neque id quis. Doloribus saepe, labore voluptatem pariatur quisquam dolorem provident nisi rem reprehenderit
-            voluptate iure dicta doloremque.
+          <p class="mb-4 font-extrabold highlight" style="font-size: 36px;">PIRATI "Lora Holliday"</p>
+          <p class="mb-4" style="font-size: 24px; color: white;">
+            PIRATI “LORA HOLLIDAY, 1994. Izdanje PGP RTS - kaseta i LP
           </p>
           <SpotifyEmbed spotifyUrlProp="https://open.spotify.com/embed/album/7q0dHs3EZYLrydAKRktZ25"/>
         </div>
@@ -45,12 +42,9 @@
           <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 text-white">
             Featured Album
           </h2>
-          <p class="mb-4 font-extrabold highlight-live">"PIRATI Lora Holliday (First concert, Wine party, Kisač) LIVE"</p>
-          <p class="mb-4">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam ducimus harum modi vero optio obcaecati similique
-            molestiae doloremque ullam sapiente tempora dolores, corporis quas minus itaque culpa alias odit quo veniam ut
-            neque id quis. Doloribus saepe, labore voluptatem pariatur quisquam dolorem provident nisi rem reprehenderit
-            voluptate iure dicta doloremque.
+          <p class="mb-4 font-extrabold highlight-live" style="font-size: 36px; line-height: 36px;">PIRATI "Lora Holliday" (First concert, Wine party - Kisač, 1988) LIVE</p>
+          <p class="mb-4" style="font-size: 24px; color: white;">
+            PIRATI "Lora Holliday", LIVE (1988), Vinski bal – Kisač, sopstveno elektronsko izdanje, 2024. godine
           </p>
           <SpotifyEmbed spotifyUrlProp="https://open.spotify.com/embed/album/0hxxD23r5fQbRGeyHa3QSE"/>
         </div>

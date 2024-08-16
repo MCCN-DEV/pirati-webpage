@@ -22,11 +22,28 @@
             <span v-for="(char, index) in paragraph2" :key="index">{{ char }}</span>
           </p>
         </div>
+        <h4 class="mb-4 subtitle about-subtitle">Prvi Nastup</h4>
+        <div class="paragraph-container mb-8">
+          <img class="paragraph-img-right mt-4 md:mt-0 paragraph-img rounded-lg" src="https://i.imgur.com/7o6gXKY.png" alt="Image" />
+          <p class="mb-4 centered-paragraph about-paragraph letter-animation flex-1">
+            <span v-for="(char, index) in paragraph4" :key="index">{{ char }}</span>
+          </p>
+        </div>
+        <h4 class="mb-4 subtitle about-subtitle">Studijska Snimanja</h4>
+        <div class="paragraph-container mb-8">
+          <img class="paragraph-img-left mt-4 mb-8 md:mt-0 paragraph-img rounded-lg" src="https://i.imgur.com/7o6gXKY.png" alt="Image" />
+          <p class="mb-4 centered-paragraph about-paragraph letter-animation flex-1">
+            <span v-for="(char, index) in paragraph5" :key="index">{{ char }}</span>
+            <br/>
+            <br/>
+            <a href="https://www.youtube.com/watch?v=yb5OkBXbbIc">LINK</a>
+          </p>
+        </div>
         <h4 class="mb-4 subtitle about-subtitle">Our Albums</h4>
         <div class="paragraph-container mb-8">
           <img class="paragraph-img-right mt-4 md:mt-0 paragraph-img rounded-lg" src="https://i.imgur.com/7o6gXKY.png" alt="Image" />
           <p class="mb-4 centered-paragraph about-paragraph letter-animation flex-1">
-            <span v-for="(char, index) in paragraph3" :key="index">{{ char }}</span>
+            <span v-for="(char, index) in paragraph6" :key="index">{{ char }}</span>
           </p>
         </div>
       </div>
@@ -51,9 +68,33 @@ export default {
   },
   data() {
     return {
-      paragraph1: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto asperiores mollitia molestiae autem nulla recusandae, modi distinctio inventore ut sint. Ipsum quos amet voluptatum maiores impedit pariatur exercitationem! Nesciunt officiis perspiciatis est placeat dolor natus aperiam pariatur, voluptas voluptates consectetur, qui praesentium incidunt architecto iure maxime doloremque obcaecati, repellat ipsa fugiat reiciendis fugit repudiandae necessitatibus autem. Fuga, voluptatum consequatur nulla voluptate totam sunt nihil cupiditate officia illo odit eos quo omnis veniam veritatis quos excepturi recusandae eum.'.split(''),
-      paragraph2: 'Itaque illo beatae harum eaque culpa praesentium esse recusandae ipsam qui corporis officia, obcaecati impedit dolore omnis dolor dolorum quod eveniet sed voluptatem cum laboriosam vero eum explicabo minus? Neque itaque nihil, laudantium optio quae corrupti quisquam incidunt quasi quas. Ratione quae maiores commodi suscipit aspernatur laudantium, nostrum placeat, voluptates sed obcaecati autem vitae magnam adipisci soluta voluptatibus assumenda minus error quaerat, iste deleniti. Corporis odio delectus assumenda in cupiditate?'.split(''),
+      paragraph1: `Značenje pojma - Izrazi „piraterija ili piratstvo”, korišćeni su za neovlašćeno kopiranje, distribuciju i prodaju dela zaštićenih autorskim pravima.
+U vreme nastanka muzičke grupe “PIRATI” (VIS Pirati), uglavnom se to odnosilo na muzička ili filmska dela, softvere i sl., odnosno na oblast koju danas šire nazivamo “kreativne industrije”. Ova praksa sa kraja prošlog veka se vremenom značajno proširila u celom svetu.
+Pojava, da se kršenje ekskluzivnih prava na kreativnim delima, označava kao „piratstvo”, prethodila je zakonima o autorskim pravima, koji su kasnije ovo pokušali da precizno urede u pravnom kontekstu.
+Grupu “PIRATI” (kasnije VIS Pirati) osnovao je u Novom Sadu Đorđe Jovanović na proleće 1988. godine.
+Grupa je bila aktivna od 1988. do 1995. godine.
+`.split(''),
+      paragraph2: `
+Prvu postavu grupe “PIRATI” su činili:
+Đorđe Jovanović – Žak (gitara), Dragan Nikolić – Gagi (vokal), Cikora Zoltan – Ciki (bubnjevi), Zoran Veselinović – Zoki (gitara), Darko Matić – Darež (bas gitara).
+Članovi prve postave grupe su ranije svirali u različitim drugim grupama - Đorđe Jovanović je svirao u grupama “ATAK NA BATAK” (pobedili na prvoj akustičarskoj gitarijadi u Sivcu sa njegovom pesmom), “NERON” (kasnije vinil izdanje) “PATAK I PEPERMINTI” (gitarijada Sivac),
+Dragan Nikolić je pevao u grupama “MAKARON” i “REVIJA”,
+Cikora Zoltan je svirao bubnjeve u brojnim novosadskim grupama,
+Zoran Veselinović je svirao gitaru u više novosadskih grupa,
+Darko Matić je svirao bas gitaru u više novosadskih grupa.
+Od početka rada grupe, svirala se isključivo autorska muzika Đorđa Jovanovića.
+Stilska muzička orijentacija grupe “PIRATI” je u osnovi bio pop rok zvuk – Bitlsi, Stounsi, itd.
+`.split(''),
       paragraph3: 'Optio numquam earum nostrum eos delectus, animi dicta illo dolore tempore corporis, officiis aut architecto debitis esse sint modi sit odit. Ipsum ea minima provident. Omnis sapiente porro unde, dolor natus velit inventore reprehenderit dolorem iusto ullam libero, totam, perferendis quidem deserunt nulla nisi id. Molestias maiores eveniet asperiores eos ipsa commodi minima?'.split(''),
+      paragraph4: `Prvi nastup grupe “PIRATI” je bio na “Danima vina” u Kisaču 1998. godine. Svirala je prva postava grupe.
+Sa ovog nastupa je 5 pesama skinuto sa VHS kasete i objavljeno kao "PIRATI Lora Holliday (First concert, Wine party - Kisač, 1988) LIVE". godine na muzičkim platformama.
+`.split(''),
+      paragraph5: `Đorđe Jovanović je u ime grupe “PIRATI” potpisao ugovor o ekskluzivnom snimanju originalnog muzičkog materijala grupe za Radio Novi Sad 1992. godine. Tokom leta i jeseni 1993. godine u studiju 1 RNS, snimljeno je ukupno dvanaest pesama. Snimatelj je bio Jan Šaš, producent i duvački instrumenti, Deže Molnar, deo aranžmana i klavijature uradio je Aleksandar Dujin, prateći vokali Tanja Jovićević, Januzović Aleksandar – Jana je odsvirao jedan deo gitara, Đorđe Jovanović je odsvirao jedan deo gitara, Rade Ćirić je odsvirao klasičnu gitaru u jednoj pesmi, Darko Matić i Dušan Ševarlić su svirali bas, itd. 
+      Sve pesme je otpevao pevač grupe Dragan Nikolić.
+Od dvanaest snimljenih, odabrano je deset autorskih pesama za budući album “Lora Holliday” koji je izdat za PGP RTS juna 1994. Snimanje je vršeno i za potrebe RTV i dečije emisije “Muzički tobogan”, pesma “Život nije kao balet” LINK. 
+`.split(''),
+      paragraph6:
+      `Tiraž je bio rasprodat – oko 5000 kaseta i LP ploča (uglavnom za radio stanice).`,
     };
   },
   mounted() {
