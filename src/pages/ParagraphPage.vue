@@ -1,22 +1,22 @@
 <template>
-    <div class="paragraph-page">
-      <header>
-        <Navbar />
-      </header>
-      <main class="content-container">
-        <div class="hero-container">
-          <h1 class="page-title">
-            {{ pageTitle }}
-          </h1>
-          <img v-if="pageImage" :src="pageImage" alt="Paragraph Image" class="paragraph-image" />
-          <p class="paragraph-text">
-            {{ paragraphContent }}
-          </p>
-        </div>
-      </main>
-      <Footer />
-    </div>
-  </template>
+  <div class="paragraph-page">
+    <header>
+      <Navbar />
+    </header>
+    <main class="content-container">
+      <div class="hero-container">
+        <h1 class="page-title">
+          {{ pageTitle }}
+        </h1>
+        <img v-if="pageImage" :src="pageImage" alt="Paragraph Image" class="paragraph-image" />
+        <p class="paragraph-text">
+          {{ paragraphContent }}
+        </p>
+      </div>
+    </main>
+    <Footer />
+  </div>
+</template>
   
   
 <script>

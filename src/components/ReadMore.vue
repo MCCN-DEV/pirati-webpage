@@ -1,8 +1,8 @@
 <template>
-    <div class="read-more-container">
-      <router-link :to="href" class="read-more-button">Read More</router-link>
-    </div>
-  </template>
+<div class="read-more-container">
+  <router-link :to="href" class="read-more-button">Read More</router-link>
+</div>
+</template>
   
   <script>
   export default {

@@ -24,13 +24,11 @@
               <SpotifyEmbed :spotifyUrlProp="featuredAlbumData.spotifyUrl"/>
             </div>
           </div>
-  
 
-          
           <div class="lg:flex lg:gap-16 mt-16">
           <div class="lg:w-1/3">
             <h2 class="mb-4 text-4xl font-extrabold text-white">More Albums</h2>
-            <div class="grid md:grid-cols-2 ">
+            <div class="grid md:grid-cols-2">
               <div v-for="(album, key) in otherAlbums" :key="key" class="card" @click="selectAlbum(key)">
                 <img class="responsive-img w-full h-auto object-cover rounded-lg" :src="album.image" :alt="album.alt">
                 <div class="card-content">

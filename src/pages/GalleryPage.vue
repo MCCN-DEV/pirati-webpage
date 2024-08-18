@@ -1,38 +1,38 @@
 <template>
-    <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
-      <Navbar class="mb-8"/>
-      <div class="text-center mb-8">
-        <h2 id="gallery" class="mb-4 text-5xl tracking-tight font-extrabold text-white">
-          Gale<span class="font-extrabold highlight">rija</span>
-        </h2>
-      </div>
-      <div class="container mx-auto px-4 py-8 md:px-6 lg:px-8">
-        <div v-for="(section, sectionIndex) in paginatedImages" :key="sectionIndex" :id="'section-' + (sectionIndex + 1)" class="mb-12">
-          <h3 class="text-2xl font-bold mb-4 text-center">Section {{ sectionIndex + 1 }}</h3>
-          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-            <GalleryImage
-              v-for="(image, index) in section"
-              :key="index"
-              :imageSrc="image"
-              @open-popup="openPopup"
-              class="w-full h-auto"
-            />
-          </div>
-        </div>
-      </div>
-      <div v-if="isPopupOpen" class="popup-overlay" @click="closePopup">
-        <div class="popup-content" @click.stop>
-          <img :src="selectedImage" alt="" class="popup-image">
-          <button class="popup-close" @click="closePopup">
-            <svg class="popup-close-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path d="M6 18L18 6M6 6l12 12" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-        </div>
-      </div>
-      <Footer />
+  <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
+    <Navbar class="mb-8"/>
+    <div class="text-center mb-8">
+      <h2 id="gallery" class="mb-4 text-5xl tracking-tight font-extrabold text-white">
+        Gale<span class="font-extrabold highlight">rija</span>
+      </h2>
     </div>
-  </template>
+    <div class="container mx-auto px-4 py-8 md:px-6 lg:px-8">
+      <div v-for="(section, sectionIndex) in paginatedImages" :key="sectionIndex" :id="'section-' + (sectionIndex + 1)" class="mb-12">
+        <h3 class="text-2xl font-bold mb-4 text-center">Section {{ sectionIndex + 1 }}</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+          <GalleryImage
+            v-for="(image, index) in section"
+            :key="index"
+            :imageSrc="image"
+            @open-popup="openPopup"
+            class="w-full h-auto"
+          />
+        </div>
+      </div>
+    </div>
+    <div v-if="isPopupOpen" class="popup-overlay" @click="closePopup">
+      <div class="popup-content" @click.stop>
+        <img :src="selectedImage" alt="" class="popup-image">
+        <button class="popup-close" @click="closePopup">
+          <svg class="popup-close-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 18L18 6M6 6l12 12" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <Footer />
+  </div>
+</template>
   
   <script>
   import { gridImages } from '../data/gridImages';
