@@ -33,9 +33,12 @@
   </div>
   <div class="container mx-auto px-4 py-8 md:px-6 lg:px-24">
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-      <div v-for="(image, index) in displayedGridImages" :key="index" class="overflow-hidden rounded-lg shadow-lg">
-        <img :src="image" alt="" class="object-cover w-full h-full transition-transform duration-300 transform hover:scale-105 cursor-pointer" @click="openPopup(image)">
-      </div>
+      <GalleryImage
+        v-for="(image, index) in displayedGridImages"
+        :key="index"
+        :imageSrc="image"
+        @open-popup="openPopup"
+      />
     </div>
   </div>
 
@@ -55,9 +58,13 @@
 import { carouselImages } from '../data/constants';
 import { gridImages } from '../data/gridImages';
 import { gsap } from 'gsap';
+import GalleryImage from './GalleryImage.vue';
 
 export default {
   name: 'Carousel',
+  components: {
+    GalleryImage
+  },
   data() {
     return {
       activeSlide: 1,
@@ -71,7 +78,7 @@ export default {
   },
   computed: {
     displayedGridImages() {
-      return this.isMobile ? this.gridImages.slice(0, 3) : this.gridImages;
+      return this.isMobile ? this.gridImages.slice(0, 3) : this.gridImages.slice(0, 6);
     }
   },
   methods: {
@@ -119,7 +126,7 @@ export default {
     closePopup() {
       this.isPopupOpen = false;
       this.selectedImage = '';
-    },
+    }
   },
   created() {
     this.startAutoScroll();
@@ -130,10 +137,9 @@ export default {
       clearInterval(this.timer);
     }
     window.removeEventListener('resize', this.handleResize);
-  },
+  }
 };
 </script>
-
 <style scoped>
 .relative {
   position: relative;
@@ -287,5 +293,7 @@ export default {
   height: 24px;
   stroke: var(--color-highlight);
   stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 </style>

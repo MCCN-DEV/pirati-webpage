@@ -1,8 +1,8 @@
 <template>
   <div>
     <div id="albums" class="text-center mb-8 mobile-mb-4">
-      <h2 id="gallery" class="mb-4 text-5xl tracking-tight font-extrabold text-gray-900 text-white">
-        Alb<span class="font-extrabold highlight">ums</span>
+      <h2 class="mb-4 text-5xl tracking-tight font-extrabold text-gray-900 text-white">
+        Alb<span class="font-extrabold highlight">umi</span>
       </h2>
     </div>
     <section class="section-container">
@@ -17,7 +17,7 @@
         </div>
         <div class="lg:col-span-1 font-light text-gray-500 sm:text-lg dark:text-gray-400">
           <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 text-white">
-            Featured Album
+            Album
           </h2>
           <p class="mb-4 font-extrabold highlight" style="font-size: 36px;">PIRATI "Lora Holliday"</p>
           <p class="mb-4" style="font-size: 24px; color: white;">
@@ -40,7 +40,7 @@
         </div>
         <div class="lg:col-span-1 font-light text-gray-500 sm:text-lg dark:text-gray-400">
           <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 text-white">
-            Featured Album
+            Album
           </h2>
           <p class="mb-4 font-extrabold highlight-live" style="font-size: 36px; line-height: 36px;">PIRATI "Lora Holliday" (First concert, Wine party - Kisač, 1988) LIVE</p>
           <p class="mb-4" style="font-size: 24px; color: white;">

@@ -5,8 +5,8 @@
   --color-highlight-live: #996f2a; 
   --color-highlight-hover: #c94b32;
   --color-text: #ffffff;
-  --color-button-background: #2d3748; 
-  --color-button-hover: #4a5568; 
+  --color-button-background: #1a273f; 
+  --color-button-hover: #111a2b; 
 
   --color-background-soft: var(--vt-c-black-soft);
   --color-background-mute: var(--vt-c-black-mute);
@@ -45,33 +45,10 @@
 body {
   min-height: 100vh;
   color: var(--color-text);
-  background: linear-gradient(135deg, 
-  hsla(219, 43%, 12%, 1) 0%, 
-  hsla(220, 42%, 13%, 1) 20%, 
-  hsla(219, 41%, 13%, 1) 40%, 
-  hsla(219, 41%, 14%, 1) 60%, 
-  hsla(219, 40%, 14%, 1) 80%, 
-  hsla(220, 41%, 15%, 1) 90%, 
-  hsla(220, 45%, 9%, 1) 100%
-);
-background: -moz-linear-gradient(135deg, 
-  hsla(219, 43%, 12%, 1) 0%, 
-  hsla(220, 42%, 13%, 1) 20%, 
-  hsla(219, 41%, 13%, 1) 40%, 
-  hsla(219, 41%, 14%, 1) 60%, 
-  hsla(219, 40%, 14%, 1) 80%, 
-  hsla(220, 41%, 15%, 1) 90%, 
-  hsla(220, 45%, 9%, 1) 100%
-);
-background: -webkit-linear-gradient(135deg, 
-  hsla(219, 43%, 12%, 1) 0%, 
-  hsla(220, 42%, 13%, 1) 20%, 
-  hsla(219, 41%, 13%, 1) 40%, 
-  hsla(219, 41%, 14%, 1) 60%, 
-  hsla(219, 40%, 14%, 1) 80%, 
-  hsla(220, 41%, 15%, 1) 90%, 
-  hsla(220, 45%, 9%, 1) 100%
-);
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.1) 75%, transparent 75%) 0 0,
+  var(--color-background);
+background-size: 10px 10px;
+background-blend-mode: overlay;
 
       transition:
     color 0.5s,
