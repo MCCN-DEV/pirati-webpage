@@ -26,9 +26,8 @@
             </svg>
           </a>
           <ul class="absolute dropdown-menu bg-[#0d1422] text-white font-semibold mt-2 w-48 z-10" :class="{ 'show': activeDropdown === 'gallery' }">
-            <li><a class="block w-full px-4 py-2 hover:bg-[#1a2630] dropdown-animation" href="#">Submenu 1</a></li>
-            <li><a class="block w-full px-4 py-2 hover:bg-[#1a2630] dropdown-animation" href="#">Submenu 2</a></li>
-            <li><a class="block w-full px-4 py-2 hover:bg-[#1a2630] dropdown-animation" href="#">Submenu 3</a></li>
+            <li><a class="block w-full px-4 py-2 hover:bg-[#1a2630] dropdown-animation" href="#" @click.prevent="navigateToGallery('section-1')">Section 1</a></li>
+            <li><a class="block w-full px-4 py-2 hover:bg-[#1a2630] dropdown-animation" href="#" @click.prevent="navigateToGallery('section-2')">Section 2</a></li>
           </ul>
         </div>
       </li>
@@ -79,19 +78,20 @@
 </template>
 
 <script>
+import { nextTick } from 'vue';
+
 export default {
   data() {
     return {
+      isMenuOpen: false,
       activeDropdown: null,
+      currentRoute: this.$route.path
     };
   },
-  props: {
-    isMenuOpen: {
-      type: Boolean,
-      default: false,
-    },
-  },
   methods: {
+    toggleMenu() {
+      this.isMenuOpen = !this.isMenuOpen;
+    },
     showDropdown(name) {
       this.activeDropdown = name;
     },
@@ -100,25 +100,26 @@ export default {
         this.activeDropdown = null;
       }
     },
-    toggleMenu() {
-      this.$emit('update:isMenuOpen', !this.isMenuOpen);
+    navigateToGallery(sectionId) {
+      this.$router.push({ path: `/gallery#${sectionId}` }).catch(() => {});
+      this.scrollToSection(sectionId);
     },
     scrollToSection(sectionId) {
-      const section = document.getElementById(sectionId);
-      if (section) {
-        section.scrollIntoView({ behavior: 'smooth' });
-      }
-    },
+      nextTick(() => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+          section.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    }
   },
-  computed: {
-    currentRoute() {
-      return this.$route.path;
-    },
-  },
+  watch: {
+    $route(to) {
+      this.currentRoute = to.path;
+    }
+  }
 };
 </script>
-
-
 <style scoped>
 a.dropdown-animation {
   position: relative;

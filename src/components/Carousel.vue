@@ -78,7 +78,7 @@ export default {
   },
   computed: {
     displayedGridImages() {
-      return this.isMobile ? this.gridImages.slice(0, 3) : this.gridImages;
+      return this.isMobile ? this.gridImages.slice(0, 3) : this.gridImages.slice(0, 6);
     }
   },
   methods: {
@@ -293,5 +293,7 @@ export default {
   height: 24px;
   stroke: var(--color-highlight);
   stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 </style>
