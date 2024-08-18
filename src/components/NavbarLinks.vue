@@ -10,11 +10,11 @@
             </svg>
           </a>
           <ul class="absolute dropdown-menu bg-[#0d1422] text-white font-semibold mt-2 w-48 z-10" :class="{ 'show': activeDropdown === 'about' }">
-            <li><a class="block w-full px-4 py-2 hover:bg-[#1a2630] dropdown-animation" href="#">Piraterija i Piratstvo</a></li>
-            <li><a class="block w-full px-4 py-2 hover:bg-[#1a2630] dropdown-animation" href="#">Prva Postava Grupe</a></li>
-            <li><a class="block w-full px-4 py-2 hover:bg-[#1a2630] dropdown-animation" href="#">Prvi Nastup</a></li>
-            <li><a class="block w-full px-4 py-2 hover:bg-[#1a2630] dropdown-animation" href="#">Potpisivanje Ugovora</a></li>
-            <li><a class="block w-full px-4 py-2 hover:bg-[#1a2630] dropdown-animation" href="#">Tiraž Rasprodat</a></li>
+            <li><a class="block w-full px-4 py-2 hover:bg-[#1a2630] dropdown-animation" href="/paragraph/1">Piraterija i Piratstvo</a></li>
+            <li><a class="block w-full px-4 py-2 hover:bg-[#1a2630] dropdown-animation" href="/paragraph/2">Prva Postava Grupe</a></li>
+            <li><a class="block w-full px-4 py-2 hover:bg-[#1a2630] dropdown-animation" href="/paragraph/3">Prvi Nastup</a></li>
+            <li><a class="block w-full px-4 py-2 hover:bg-[#1a2630] dropdown-animation" href="/paragraph/4">Potpisivanje Ugovora</a></li>
+            <li><a class="block w-full px-4 py-2 hover:bg-[#1a2630] dropdown-animation" href="/paragraph/5">Tiraž Rasprodat</a></li>
           </ul>
         </div>
       </li>
@@ -40,8 +40,8 @@
             </svg>
           </a>
           <ul class="absolute dropdown-menu bg-[#0d1422] text-white font-semibold mt-2 w-48 z-10" :class="{ 'show': activeDropdown === 'albums' }">
-            <li><a class="block w-full px-4 py-2 hover:bg-[#1a2630] dropdown-animation" href="#">"Lora Holliday"</a></li>
-            <li><a class="block w-full px-4 py-2 hover:bg-[#1a2630] dropdown-animation" href="#">"Lora Holliday LIVE"</a></li>
+            <li><router-link class="block w-full px-4 py-2 hover:bg-[#1a2630] dropdown-animation" :to="{ name: 'AlbumInfo', params: { album: 'loraHolliday' } }">Lora Holliday</router-link></li>
+            <li><router-link class="block w-full px-4 py-2 hover:bg-[#1a2630] dropdown-animation" :to="{ name: 'AlbumInfo', params: { album: 'loraHollidayLive' } }">Lora Holliday LIVE</router-link></li>
           </ul>
         </div>
       </li>

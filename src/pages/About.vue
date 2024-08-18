@@ -7,7 +7,7 @@
     <main class="px-4 py-8">
       <div class="content text-gray-400">
         <h2 class="mb-4 text-4xl tracking-tight font-extrabold about-title text-white">
-          About <span class="font-extrabold highlight">Us</span>
+          Grupa <span class="font-extrabold highlight">Pirati</span>
         </h2>
         <div v-for="(paragraph, index) in paragraphs" :key="index" class="paragraph-container mb-8">
           <h4 class="subtitle about-subtitle">{{ subtitles[index]?.content }}</h4>
