@@ -103,13 +103,10 @@ export default {
     toggleMenu() {
       this.$emit('update:isMenuOpen', !this.isMenuOpen);
     },
-    scrollToSection(section) {
-      const element = document.getElementById(section);
-      if (element) {
-        window.scrollTo({
-          top: element.offsetTop,
-          behavior: 'smooth',
-        });
+    scrollToSection(sectionId) {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
       }
     },
   },

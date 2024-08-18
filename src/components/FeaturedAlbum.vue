@@ -1,7 +1,7 @@
 <template>
   <div>
     <div id="albums" class="text-center mb-8 mobile-mb-4">
-      <h2 id="gallery" class="mb-4 text-5xl tracking-tight font-extrabold text-gray-900 text-white">
+      <h2 class="mb-4 text-5xl tracking-tight font-extrabold text-gray-900 text-white">
         Alb<span class="font-extrabold highlight">umi</span>
       </h2>
     </div>
