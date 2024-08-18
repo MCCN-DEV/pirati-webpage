@@ -19,9 +19,9 @@
   --section-gap: 160px;
 }
 
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
   :root {
-    --color-background: var(--vt-c-white);
+    /* --color-background: var(--vt-c-white);
     --color-background-soft: var(--vt-c-white-soft);
     --color-background-mute: var(--vt-c-white-mute);
 
@@ -29,7 +29,7 @@
     --color-border-hover: var(--vt-c-divider-light-1);
 
     --color-heading: var(--vt-c-text-light-1);
-    --color-text: var(--vt-c-text-light-1);
+    --color-text: var(--vt-c-text-light-1); */
     --color-highlight: #d5472c;
   }
 }
