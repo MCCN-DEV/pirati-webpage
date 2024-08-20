@@ -5,6 +5,12 @@
         <div class="px-5 xl:px-12 py-6 flex w-full items-center justify-between">
           <a class="text-3xl font-bold font-heading letter-animation" href="/">
             <span class="text-wrapper">
+              <span>G</span>
+              <span>r</span>
+              <span>u</span>
+              <span>p</span>
+              <span>a</span>
+              <span>&nbsp</span>
               <span>P</span>
               <span>i</span>
               <span>r</span>
