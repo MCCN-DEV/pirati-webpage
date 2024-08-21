@@ -2,13 +2,13 @@
   <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
     <Navbar class="mb-8"/>
     <div class="text-center mb-8">
-      <h2 id="gallery" class="mb-4 text-5xl tracking-tight font-extrabold text-white">
-        Gale<span class="font-extrabold highlight">rija</span>
-      </h2>
+      <h1 id="gallery" class="mb-4 text-5xl tracking-tight font-extrabold text-white">
+        Galerija
+      </h1>
     </div>
     <div class="container mx-auto px-4 py-8 md:px-6 lg:px-8">
       <div v-for="(section, sectionIndex) in paginatedImages" :key="sectionIndex" :id="'section-' + (sectionIndex + 1)" class="mb-12">
-        <h3 class="text-2xl font-bold mb-4 text-center">Section {{ sectionIndex + 1 }}</h3>
+        <h2 class="text-2xl font-bold mb-4 text-center">Section {{ sectionIndex + 1 }}</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
           <GalleryImage
             v-for="(image, index) in section"
