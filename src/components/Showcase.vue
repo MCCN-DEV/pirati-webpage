@@ -6,7 +6,9 @@
           <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-white">About <span class="font-extrabold highlight">Us</span></h2>
           <p class="mb-4" style="font-size: 24px; color: white;">
             Grupu “PIRATI” (kasnije VIS Pirati) osnovao je u Novom Sadu Đorđe Jovanović na proleće 1988. godine. Grupa je bila aktivna od 1988. do 1995. godine.
-            Od početka rada grupe, svirala se isključivo autorska muzika Đorđa Jovanovića. Stilska muzička orijentacija grupe “PIRATI” je u osnovi bio pop rok zvuk – Bitlsi, Stounsi, itd.
+            <br>
+            Od početka rada grupe, svirala se isključivo autorska muzika Đorđa Jovanovića. Muzička orijentacija grupe “PIRATI” je u osnovi bio pop rok zvuk (Bitlsi, Stounsi, itd.) sa uticajem i drugih muzičkih žanrova.
+            <br>
             Kao autor muzike i teksta pesama grupe "PIRATI",  po formalnom prestanku rada grupe, Đorđe Jovanović nastavlja sa samostalnim autorskim radom do danas. 
           </p>
         </div>
