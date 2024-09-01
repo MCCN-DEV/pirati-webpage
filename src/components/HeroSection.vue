@@ -1,10 +1,12 @@
 <template>
   <div class="hero-container absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col justify-center items-center w-3/5 p-6 bg-transparent border-2 border-white border-opacity-50 shadow-lg text-center text-white">
     <h1 class="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold uppercase tracking-wide mb-4 pirati-title">
-      <span v-for="(char, index) in 'Pirati'" :key="index" class="char">{{ char }}</span>
+      <h2 v-for="(char, index) in 'Grupa'" :key="index" class="char">{{ char }}</h2>
+      <span>&nbsp</span>
+      <h1 v-for="(char, index) in 'Pirati'" :key="index" class="char">{{   char }}</h1>
     </h1>
     <p class="text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed paragraph-text">
-      <p style="font-size: 40px;">JEDINI PIRATI KOJI SU ORIGINAL!</p>
+      <p style="font-size: 40px;">JEDINI "PIRATI" KOJI SU ORIGINAL!</p>
       <br/>
       <i style="margin-top: 8px;">
         Slušanje muzike grupe “PIRATI” može pozitivno uticati na zdravlje ljudi i životnu sredinu.
