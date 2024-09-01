@@ -116,6 +116,8 @@ export default {
 
 <style scoped>
 .hero-container {
+  width: 90%; 
+  max-width: 1200px; 
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -124,6 +126,7 @@ export default {
 }
 
 .pirati-title {
+  font-size: 8vw;
   cursor: pointer;
   user-select: none;
   text-align: center;
@@ -158,5 +161,17 @@ export default {
 
 .paragraph-text {
   opacity: 1;
+}
+
+@media (min-width: 1024px) {
+  .pirati-title {
+    font-size: 3vw;
+  }
+}
+
+@media (min-width: 768px) {
+  .pirati-title {
+    font-size: 5vw;
+  }
 }
 </style>
