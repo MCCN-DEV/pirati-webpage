@@ -2,7 +2,7 @@
   <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
     <Navbar class="mb-8"/>
     <div class="text-center mb-8">
-      <h1 id="gallery" class="mb-4 text-5xl tracking-tight font-extrabold text-white">
+      <h1 id="gallery" class="mb-4 text-5xl tracking-tight font-extrabold text-white landscape__margin-gallery">
         Galerija
       </h1>
     </div>

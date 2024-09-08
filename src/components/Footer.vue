@@ -3,7 +3,7 @@
     <div class="w-full px-4 md:px-20 py-4 md:py-8">
       <div class="flex flex-col md:flex-row md:items-center md:justify-between">
         <a href="#" class="flex items-center justify-center md:justify-start mb-4 md:mb-0 space-x-3 rtl:space-x-reverse w-full md:w-auto">
-          <span class="highlight self-center text-3xl font-semibold whitespace-nowrap text-white">Grupa Pirati</span>
+          <span class="highlight self-center text-3xl font-semibold whitespace-nowrap text-white logo__grupa-pirati">Grupa Pirati</span>
         </a>
         <div class="flex flex-col md:flex-row md:items-start md:space-x-12 mt-4 md:mt-0">
           <div class="flex flex-col items-center md:items-start mb-4 md:mb-0">
@@ -26,7 +26,7 @@
           </div>
           <div class="flex flex-col items-center md:items-start mb-4 md:mb-0">
             <h4 class="text-lg font-semibold text-gray-700 dark:text-gray-300">Follow Us</h4>
-            <div class="flex space-x-4 mt-2">
+            <div class="flex space-x-4 mt-2 landscape:space-x-2 landscape:w-44">
               <a href="https://music.youtube.com/search?q=pirati+lora+holliday" class="svg-icon">
                 <img src="@/assets/svg/youtube.svg" alt="YouTube" class="w-8 h-8 hover:scale-110 transition-transform duration-300">
               </a>
@@ -91,7 +91,11 @@ export default {
 </script>
 
 <style scoped>
-
+@media (orientation:landscape){
+  .logo__grupa-pirati{
+    padding-right: 40px;
+  }
+}
 
 li {
   cursor: pointer;

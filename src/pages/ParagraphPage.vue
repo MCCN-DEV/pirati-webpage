@@ -3,8 +3,8 @@
     <header>
       <Navbar />
     </header>
-    <main class="content-container">
-      <div class="hero-container">
+    <main class="content-container" >
+      <div class="hero-container landscape__margin-main">
         <h1 class="page-title">
           {{ pageTitle }}
         </h1>
