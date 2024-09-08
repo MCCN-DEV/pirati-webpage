@@ -67,6 +67,7 @@
           </svg>
         </a>
         <ul v-if="activeDropdown === 'about'" class="pl-4">
+          <li><a class="block w-full px-4 py-2 hover:bg-[#1a2630] dropdown-animation" href="/about">Sve o nama</a></li>
           <li><a class="block w-full px-4 py-2 hover:bg-[#1a2630] dropdown-animation" href="/paragraph/1">Piraterija i Piratstvo</a></li>
           <li><a class="block w-full px-4 py-2 hover:bg-[#1a2630] dropdown-animation" href="/paragraph/2">Prva Postava Grupe</a></li>
           <li><a class="block w-full px-4 py-2 hover:bg-[#1a2630] dropdown-animation" href="/paragraph/3">Prvi Nastup</a></li>
