@@ -10,6 +10,10 @@
     margin-top: 100px
   }
 
+  .landscape__hidden{
+    display: none;
+  }
+
   /* img{
     transform: scale(0.5);
   } */

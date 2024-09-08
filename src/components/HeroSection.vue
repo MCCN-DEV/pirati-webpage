@@ -14,8 +14,8 @@
     </p>
   </div>
   <div class="absolute bottom-12 left-1/2 transform -translate-x-1/2">
-    <button @click="scrollToSection('albums')" class="down-arrow-button">
-      <svg class="w-6 h-6 landscape:hidden" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+    <button @click="scrollToSection('aboutus')" class="down-arrow-button landscape__hidden">
+      <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" d="M5.293 9.293a1 1 0 011.414 0L10 12.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
       </svg>
     </button>
