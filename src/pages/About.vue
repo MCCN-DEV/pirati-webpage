@@ -157,8 +157,9 @@ a:hover {
 .subtitle {
   text-align: center;
   margin: 1.5rem 0; 
-  font-size: 1.25rem; 
+  font-size: 1.5rem; 
   font-weight: bold;
+  color: var(--color-highlight);
 }
 
 .h-screen {
@@ -229,4 +230,5 @@ a:hover {
     float: none;
   }
 }
+
 </style>
