@@ -31,8 +31,10 @@
 
 				<div class="flex justify-center">
 					<div>
-						<h2 class="text-5xl pb-10">TEKST / LYRICS</h2>
-						<div class="flex justify-center">
+						<h2 class="mb-4 text-4xl font-extrabold text-white">
+							TEKST /<span :class="highlightClass"> LYRICS</span>
+						</h2>
+						<div class="">
 							<SongLyrics></SongLyrics>
 						</div>
 					</div>
