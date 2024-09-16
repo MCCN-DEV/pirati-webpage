@@ -1,76 +1,76 @@
 <template>
 	<div>
-		<Navbar class="mb-8" />
-		<main>
-			<div id="albums" class="text-center mb-8 mobile-mb-4">
-				<h1 id="gallery" class="mb-4 text-5xl font-extrabold text-white">
-					Istaknuti <span :class="highlightClass">album</span>
-				</h1>
+	  <Navbar class="mb-8" />
+	  <main>
+		<div id="albums" class="text-center mb-8 mobile-mb-4">
+		  <h1 id="gallery" class="mb-4 text-5xl font-extrabold text-white">
+			Istaknuti <span :class="highlightClass">album</span>
+		  </h1>
+		</div>
+  
+		<section
+		  class="section-container py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6 mb-16"
+		>
+		  <div class="lg:flex lg:gap-16">
+			<div class="lg:w-1/3 flex justify-center">
+			  <img
+				class="responsive-img w-full h-auto object-cover rounded-lg"
+				:src="featuredAlbumData.image"
+				:alt="featuredAlbumData.alt"
+			  />
 			</div>
-
-			<section
-				class="section-container py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6 mb-16"
-			>
-				<div class="lg:flex lg:gap-16">
-					<div class="lg:w-1/3 flex justify-center">
-						<img
-							class="responsive-img w-full h-auto object-cover rounded-lg"
-							:src="featuredAlbumData.image"
-							:alt="featuredAlbumData.alt"
-						/>
-					</div>
-					<div class="lg:w-2/3 lg:pl-8 text-white">
-						<h2 class="mb-4 text-4xl font-extrabold">Album</h2>
-						<p class="mb-4 text-2xl font-extrabold" :class="highlightClass">
-							{{ featuredAlbumData.title }}
-						</p>
-						<p class="mb-4 text-xl">{{ featuredAlbumData.description }}</p>
-						<SpotifyEmbed :spotifyUrlProp="featuredAlbumData.spotifyUrl" />
-					</div>
+			<div class="lg:w-2/3 lg:pl-8 text-white">
+			  <h2 class="mb-4 text-4xl font-extrabold">Album</h2>
+			  <p class="mb-4 text-2xl font-extrabold" :class="highlightClass">
+				{{ featuredAlbumData.title }}
+			  </p>
+			  <p class="mb-4 text-xl">{{ featuredAlbumData.description }}</p>
+			  <SpotifyEmbed :spotifyUrlProp="featuredAlbumData.spotifyUrl" />
+			</div>
+		  </div>
+  
+		  <div class="flex justify-center mt-8">
+			<div>
+			  <h2 class="mb-4 text-4xl font-extrabold text-white">
+				TEKST /<span :class="highlightClass"> LYRICS</span>
+			  </h2>
+			  <div>
+				<SongLyrics />
+			  </div>
+			</div>
+		  </div>
+  
+		  <div class="lg:flex lg:gap-16 mt-16">
+			<div class="lg:w-1/3">
+			  <h2 class="mb-4 text-4xl font-extrabold text-white">More Albums</h2>
+			  <div class="grid md:grid-cols-2">
+				<div
+				  v-for="(album, key) in otherAlbums"
+				  :key="key"
+				  class="card"
+				  @click="selectAlbum(key)"
+				>
+				  <img
+					class="responsive-img w-full h-auto object-cover rounded-lg"
+					:src="album.image"
+					:alt="album.alt"
+				  />
+				  <div class="card-content">
+					<h3 class="font-bold text-white">{{ album.title }}</h3>
+				  </div>
 				</div>
-
-				<div class="flex justify-center">
-					<div>
-						<h2 class="mb-4 text-4xl font-extrabold text-white">
-							TEKST /<span :class="highlightClass"> LYRICS</span>
-						</h2>
-						<div class="">
-							<SongLyrics></SongLyrics>
-						</div>
-					</div>
-				</div>
-
-				<div class="lg:flex lg:gap-16 mt-16">
-					<div class="lg:w-1/3">
-						<h2 class="mb-4 text-4xl font-extrabold text-white">More Albums</h2>
-						<div class="grid md:grid-cols-2">
-							<div
-								v-for="(album, key) in otherAlbums"
-								:key="key"
-								class="card"
-								@click="selectAlbum(key)"
-							>
-								<img
-									class="responsive-img w-full h-auto object-cover rounded-lg"
-									:src="album.image"
-									:alt="album.alt"
-								/>
-								<div class="card-content">
-									<h3 class="font-bold text-white">{{ album.title }}</h3>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="lg:w-2/3 lg:pl-8 text-white">
-						<p class="text-lg text-white">{{ exploreText }}</p>
-					</div>
-				</div>
-			</section>
-		</main>
-		<Footer />
+			  </div>
+			</div>
+			<div class="lg:w-2/3 lg:pl-8 text-white">
+			  <p class="text-lg text-white">{{ exploreText }}</p>
+			</div>
+		  </div>
+		</section>
+	  </main>
+	  <Footer />
 	</div>
-</template>
-
+  </template>
+  
 <script>
 import SpotifyEmbed from "../components/SpotifyEmbed.vue";
 import Navbar from "../components/Navbar.vue";
