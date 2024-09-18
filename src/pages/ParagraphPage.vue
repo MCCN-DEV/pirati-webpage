@@ -24,6 +24,7 @@ import Navbar from '../components/Navbar.vue';
 import Footer from '../components/Footer.vue';
 import { onMounted } from 'vue';
 import gsap from 'gsap';
+import GrupaPiratiImage from '@/assets/img/GrupaPirati_Clanovi.jpg';
 
 export default {
   name: 'ParagraphPage',
@@ -50,7 +51,7 @@ export default {
           title: 'Piraterija i Piratstvo',
           content: `Značenje pojma - Izrazi „piraterija ili piratstvo”, korišćeni su za neovlašćeno kopiranje, distribuciju i prodaju dela zaštićenih autorskim pravima. U vreme nastanka muzičke grupe “PIRATI” (VIS Pirati), uglavnom se to odnosilo na muzička ili filmska dela, softvere i sl., odnosno na oblast koju danas šire nazivamo “kreativne industrije”. Ova praksa sa kraja prošlog veka se vremenom značajno proširila u celom svetu. Pojava, da se kršenje ekskluzivnih prava na kreativnim delima, označava kao „piratstvo”, prethodila je zakonima o autorskim pravima, koji su kasnije ovo pokušali da precizno urede u pravnom kontekstu.
           `,
-          image: 'https://i.imgur.com/7o6gXKY.png'
+          image: GrupaPiratiImage,
         },
         2: {
           title: 'Prva Postava Grupe “PIRATI”',
