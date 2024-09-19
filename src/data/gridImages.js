@@ -12,10 +12,12 @@ import TirazRasprodat_10 from "@/assets/img/TirazRasprodatPage/10.jpg";
 import TirazRasprodat_11 from "@/assets/img/TirazRasprodatPage/11.jpg";
 import TirazRasprodat_12 from "@/assets/img/TirazRasprodatPage/12.jpg";
 
-const images = import.meta.glob('@/assets/img/TirazRasprodatPage/*.jpg');
-const imagePaths = Object.values(images).map((img) => img().then((module) => module.default));
+const images = import.meta.glob("@/assets/img/TirazRasprodatPage/*.jpg");
+const imagePaths = Object.values(images).map((img) =>
+	img().then((module) => module.default)
+);
 
-console.log(images)
+console.log(images);
 
 export const gridImages = [
 	"https://i.imgur.com/7o6gXKY.png",
@@ -50,7 +52,20 @@ export const truegridImages = [
 			"https://i.imgur.com/fqFVfaj.png",
 			TirazRasprodatImage,
 		],
-		"Tiraz Rasprodat1": await Promise.all(imagePaths),
-    "Tiraz Rasprodat": [TirazRasprodat_1, TirazRasprodat_2, TirazRasprodat_3, ]
+		// "Tiraz Rasprodat1": await Promise.all(imagePaths),
+		"Tiraz Rasprodat": [
+			TirazRasprodat_1,
+			TirazRasprodat_2,
+			TirazRasprodat_3,
+			TirazRasprodat_4,
+			TirazRasprodat_5,
+			TirazRasprodat_6,
+			TirazRasprodat_7,
+			TirazRasprodat_8,
+			TirazRasprodat_9,
+			TirazRasprodat_10,
+			TirazRasprodat_11,
+			TirazRasprodat_12,
+		],
 	},
 ];
