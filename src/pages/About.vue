@@ -11,8 +11,8 @@
         </h2>
         <div v-for="(paragraph, index) in paragraphs" :key="index" class="paragraph-container mb-8">
           <h4 class="subtitle about-subtitle">{{ subtitles[index]?.content }}</h4>
-          <img v-if="index % 2 === 0" class="paragraph-img-right mt-4 mb-16 md:mt-0 paragraph-img rounded-lg" src="https://i.imgur.com/7o6gXKY.png" alt="Image" />
-          <img v-if="index % 2 !== 0" class="paragraph-img-left mt-4 mb-8 md:mt-0 paragraph-img rounded-lg" src="https://i.imgur.com/7o6gXKY.png" alt="Image" />
+          <img v-if="index % 2 === 0" class="paragraph-img-right mt-4 mb-16 md:mt-0 paragraph-img rounded-lg" :src="images[index].content" alt="Image" />
+          <img v-if="index % 2 !== 0" class="paragraph-img-left mt-4 mb-8 md:mt-0 paragraph-img rounded-lg" :src="images[index].content" alt="Image" />
           <p class="mb-4 centered-paragraph about-paragraph letter-animation flex-1">
             {{ paragraph.content }}
             <a v-if="paragraph.content.length > 250" :href="'/paragraph/' + (index + 1)" >Pročitaj više...</a>
@@ -30,6 +30,8 @@ import Footer from '../components/Footer.vue';
 import ReadMore from '../components/ReadMore.vue';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import TirazRasprodatImage from '@/assets/img/TirazRasprodat_MainPic.jpg';
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -49,12 +51,19 @@ export default {
         {content: `Potpisivanje Ugovora`},
         {content: `Tiraž Rasprodat`}
       ],
+      images:[
+        {content:'https://i.imgur.com/7o6gXKY.png'},
+        {content:'https://i.imgur.com/7o6gXKY.png'},
+        {content:'https://i.imgur.com/7o6gXKY.png'},
+        {content:'https://i.imgur.com/7o6gXKY.png'},
+        {content:TirazRasprodatImage},
+      ],
       paragraphs: [
         { content: `Značenje pojma - Izrazi „piraterija ili piratstvo”, korišćeni su za neovlašćeno kopiranje, distribuciju i prodaju dela zaštićenih autorskim pravima. U vreme nastanka muzičke grupe “PIRATI” (VIS Pirati), uglavnom se to odnosilo na muzička ili filmska dela, softvere i sl., odnosno na oblast koju danas šire nazivamo “kreativne industrije”. Ova praksa sa kraja prošlog veka se vremenom značajno proširila u celom svetu.` },
         { content: `Prvu postavu grupe “PIRATI” (1988. godina) su činili: Đorđe Jovanović – Žak (gitara), Dragan Nikolić – Gagi (vokal), Cikora Zoltan – Ciki (bubnjevi), Zoran Veselinović – Zoki (gitara), Darko Matić – Darež (bas gitara). Članovi prve postave grupe su ranije svirali u različitim drugim grupama - Đorđe Jovanović je svirao u grupama “ATAK NA BATAK” (pobedili na prvoj akustičarskoj gitarijadi u Sivcu sa njegovom pesmom), “NERON” (kasnije vinil izdanje) “PATAK I PEPERMINTI” (gitarijada Sivac), Dragan Nikolić je pevao u grupama “MAKARON” i “REVIJA”, Cikora Zoltan je svirao bubnjeve u brojnim novosadskim grupama, Zoran Veselinović je svirao gitaru u više novosadskih grupa, Darko Matić je svirao bas gitaru u više novosadskih grupa. Od početka rada grupe, svirala se isključivo autorska muzika Đorđa Jovanovića. Stilska muzička orijentacija grupe “PIRATI” je u osnovi bio pop rok zvuk – Bitlsi, Stounsi, itd.` },
         { content: `Prvi nastup grupe “PIRATI” je bio na “Danima vina” u Kisaču 1998. godine. Svirala je prva postava grupe. Sa ovog nastupa je 5 pesama skinuto sa VHS kasete i objavljeno kao "PIRATI Lora Holliday (First concert, Wine party - Kisač, 1988) LIVE", kao sopstveno izdanje na muzičkim platformama.` },
         { content: `Đorđe Jovanović je u ime grupe “PIRATI” potpisao ugovor o ekskluzivnom snimanju originalnog muzičkog materijala grupe za Radio Novi Sad 1992. godine. Tokom leta i jeseni 1993. godine u studiju 1 RNS, snimljeno je ukupno dvanaest pesama. Snimatelj je bio Jan Šaš, producent i duvački instrumenti, Deže Molnar, deo aranžmana i klavijature uradio je Aleksandar Dujin, prateći vokali Tanja Jovićević, Januzović Aleksandar – Jana je odsvirao jedan deo gitara, Đorđe Jovanović je odsvirao jedan deo gitara, Rade Ćirić je odsvirao klasičnu gitaru u jednoj pesmi, Darko Matić i Dušan Ševarlić su svirali bas, itd. Sve pesme je otpevao pevač grupe Dragan Nikolić. Od dvanaest snimljenih, odabrano je deset autorskih pesama za budući album “Lora Holliday” koji je izdat za PGP RTS juna 1994. Snimanje je vršeno i za potrebe RTV i dečije emisije “Muzički tobogan”, pesma “Život nije kao balet” LINK.` },
-        { content: `Tiraž je bio rasprodat – oko 5000 kaseta i LP ploča (uglavnom za radio stanice). ` }
+        { content: `Album “Lora Holliday” grupe “PIRATI” je izdat za PGP RTS juna 1994. godine. Tiraž je bio rasprodat - oko 5000 kaseta i LP ploča (uglavnom za radio stanice).` }
       ],
     };
   },

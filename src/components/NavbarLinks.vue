@@ -31,6 +31,7 @@
         <ul class="absolute dropdown-menu bg-[#0d1422] text-white font-semibold mt-2 w-48 z-10" :class="{ 'show': activeDropdown === 'gallery' }">
           <li><a class="block w-full px-4 py-2 hover:bg-[#1a2630] dropdown-animation" href="#" @click.prevent="navigateToGallery('section-1')">Section 1</a></li>
           <li><a class="block w-full px-4 py-2 hover:bg-[#1a2630] dropdown-animation" href="#" @click.prevent="navigateToGallery('section-2')">Section 2</a></li>
+          <li><a class="block w-full px-4 py-2 hover:bg-[#1a2630] dropdown-animation" href="#" @click.prevent="navigateToGallery('section-3')">Section 3</a></li>
         </ul>
       </li>
 

@@ -24,6 +24,7 @@ import Navbar from '../components/Navbar.vue';
 import Footer from '../components/Footer.vue';
 import { onMounted } from 'vue';
 import gsap from 'gsap';
+import TirazRasprodatImage from '@/assets/img/TirazRasprodat_MainPic.jpg';
 
 export default {
   name: 'ParagraphPage',
@@ -69,8 +70,8 @@ export default {
         },
         5: {
           title: 'Tiraž Rasprodat',
-          content: `Tiraž je bio rasprodat – oko 5000 kaseta i LP ploča (uglavnom za radio stanice).`,
-          image: 'https://i.imgur.com/7o6gXKY.png'
+          content: `Album “Lora Holliday” grupe “PIRATI” je izdat za PGP RTS juna 1994. godine. Tiraž je bio rasprodat - oko 5000 kaseta i LP ploča (uglavnom za radio stanice).`,
+          image: TirazRasprodatImage,
         }
       };
 
