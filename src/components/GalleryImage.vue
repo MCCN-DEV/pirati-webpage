@@ -1,5 +1,5 @@
 <template>
-  <div class="overflow-hidden rounded-lg shadow-lg">
+  <div class="overflow-hidden rounded-lg shadow-lg max-w-[500px] max-h-[500px]">
     <img
       :src="imageSrc"
       alt=""
