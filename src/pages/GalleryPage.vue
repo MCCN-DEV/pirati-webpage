@@ -13,7 +13,8 @@
 			
       <div v-for="(sectionGroup, groupIndex) in truepaginatedImages" :key="groupIndex" class="mb-12">
         <div v-for="(images, sectionName) in sectionGroup" :key="sectionName" class="mb-12">
-          <h2 class="text-2xl font-bold mb-4 text-center">{{ sectionName }}</h2>
+			<!-- HERE -->
+          <h2 class="text-2xl gallery_title_name font-bold mb-4 text-center">{{ sectionName }}</h2>
           <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             <GalleryImage
               v-for="(image, index) in images" :key="index"
@@ -173,6 +174,9 @@ export default {
 	transform: scale(1.1);
 }
 
+.gallery_title_name{
+	color: var(--color-highlight);
+}
 .popup-close-icon {
 	width: 24px;
 	height: 24px;

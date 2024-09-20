@@ -25,6 +25,11 @@ import Footer from '../components/Footer.vue';
 import { onMounted } from 'vue';
 import gsap from 'gsap';
 import TirazRasprodatImage from '@/assets/img/TirazRasprodat_MainPic.jpg';
+import PiraterijaIPiratstvo from '@/assets/img/PiraterijaIPiratstvo_MainPic.jpg'
+import PrviNastup from '@/assets/img/PrviNastup_main.png'
+import PrvaPostava from '@/assets/img/PrvaPostava_main.png'
+
+
 
 export default {
   name: 'ParagraphPage',
@@ -51,17 +56,17 @@ export default {
           title: 'Piraterija i Piratstvo',
           content: `Značenje pojma - Izrazi „piraterija ili piratstvo”, korišćeni su za neovlašćeno kopiranje, distribuciju i prodaju dela zaštićenih autorskim pravima. U vreme nastanka muzičke grupe “PIRATI” (VIS Pirati), uglavnom se to odnosilo na muzička ili filmska dela, softvere i sl., odnosno na oblast koju danas šire nazivamo “kreativne industrije”. Ova praksa sa kraja prošlog veka se vremenom značajno proširila u celom svetu. Pojava, da se kršenje ekskluzivnih prava na kreativnim delima, označava kao „piratstvo”, prethodila je zakonima o autorskim pravima, koji su kasnije ovo pokušali da precizno urede u pravnom kontekstu.
           `,
-          image: 'https://i.imgur.com/7o6gXKY.png'
+          image: PiraterijaIPiratstvo
         },
         2: {
           title: 'Prva Postava Grupe “PIRATI”',
           content: `Prvu postavu grupe “PIRATI” (1988. godina) su činili: Đorđe Jovanović – Žak (gitara), Dragan Nikolić – Gagi (vokal), Cikora Zoltan – Ciki (bubnjevi), Zoran Veselinović – Zoki (gitara), Darko Matić – Darež (bas gitara). Članovi prve postave grupe su ranije svirali u različitim drugim grupama - Đorđe Jovanović je svirao u grupama “ATAK NA BATAK” (pobedili na prvoj akustičarskoj gitarijadi u Sivcu sa njegovom pesmom), “NERON” (kasnije vinil izdanje) “PATAK I PEPERMINTI” (gitarijada Sivac), Dragan Nikolić je pevao u grupama “MAKARON” i “REVIJA”, Cikora Zoltan je svirao bubnjeve u brojnim novosadskim grupama, Zoran Veselinović je svirao gitaru u više novosadskih grupa, Darko Matić je svirao bas gitaru u više novosadskih grupa. Od početka rada grupe, svirala se isključivo autorska muzika Đorđa Jovanovića. Stilska muzička orijentacija grupe “PIRATI” je u osnovi bio pop rok zvuk – Bitlsi, Stounsi, itd.`,
-          image: 'https://i.imgur.com/7o6gXKY.png'
+          image: PrvaPostava
         },
         3: {
           title: 'Prvi Nastup Grupe',
           content: `Prvi nastup grupe “PIRATI” je bio na “Danima vina” u Kisaču 1998. godine. Svirala je prva postava grupe. Sa ovog nastupa je 5 pesama skinuto sa VHS kasete i objavljeno kao "PIRATI Lora Holliday (First concert, Wine party - Kisač, 1988) LIVE", kao sopstveno izdanje na muzičkim platformama.`,
-          image: 'https://i.imgur.com/7o6gXKY.png'
+          image: PrviNastup
         },
         4: {
           title: 'Potpisivanje Ugovora',

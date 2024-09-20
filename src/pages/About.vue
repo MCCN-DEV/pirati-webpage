@@ -31,6 +31,10 @@ import ReadMore from '../components/ReadMore.vue';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import TirazRasprodatImage from '@/assets/img/TirazRasprodat_MainPic.jpg';
+import PiraterijaIPiratstvo from '@/assets/img/PiraterijaIPiratstvo_MainPic.jpg'
+import PrviNastup from '@/assets/img/PrviNastup_main.png'
+import PrvaPostava from '@/assets/img/PrvaPostava_main.png'
+
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -52,9 +56,9 @@ export default {
         {content: `Tiraž Rasprodat`}
       ],
       images:[
-        {content:'https://i.imgur.com/7o6gXKY.png'},
-        {content:'https://i.imgur.com/7o6gXKY.png'},
-        {content:'https://i.imgur.com/7o6gXKY.png'},
+        {content: PiraterijaIPiratstvo},
+        {content: PrvaPostava},
+        {content: PrviNastup},
         {content:'https://i.imgur.com/7o6gXKY.png'},
         {content:TirazRasprodatImage},
       ],
