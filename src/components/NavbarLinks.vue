@@ -20,21 +20,6 @@
         </ul>
       </li>
 
-      <!-- Gallery with Dropdown for Desktop -->
-      <li class="relative" @mouseenter="showDropdown('gallery')" @mouseleave="hideDropdown('gallery')">
-        <a class="animated-link" href="#" @click.prevent="toggleDropdown('gallery')">
-          Gallery
-          <svg class="w-6 h-6 ml-1 inline" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" d="M5.293 9.293a1 1 0 011.414 0L10 12.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-          </svg>
-        </a>
-        <ul class="absolute dropdown-menu bg-[#0d1422] text-white font-semibold mt-2 w-48 z-10" :class="{ 'show': activeDropdown === 'gallery' }">
-          <li><a class="block w-full px-4 py-2 hover:bg-[#1a2630] dropdown-animation" href="#" @click.prevent="navigateToGallery('section-1')">Section 1</a></li>
-          <li><a class="block w-full px-4 py-2 hover:bg-[#1a2630] dropdown-animation" href="#" @click.prevent="navigateToGallery('section-2')">Section 2</a></li>
-          <li><a class="block w-full px-4 py-2 hover:bg-[#1a2630] dropdown-animation" href="#" @click.prevent="navigateToGallery('section-3')">Section 3</a></li>
-        </ul>
-      </li>
-
       <!-- Albums with Dropdown for Desktop -->
       <li class="relative" @mouseenter="showDropdown('albums')" @mouseleave="hideDropdown('albums')">
         <a class="animated-link" href="#" @click.prevent="toggleDropdown('albums')">
@@ -48,6 +33,23 @@
           <li><router-link class="block w-full px-4 py-2 hover:bg-[#1a2630] dropdown-animation" :to="{ name: 'AlbumInfo', params: { album: 'loraHollidayLive' } }">Lora Holliday LIVE</router-link></li>
         </ul>
       </li>
+
+        <!-- Gallery with Dropdown for Desktop -->
+        <li class="relative" @mouseenter="showDropdown('gallery')" @mouseleave="hideDropdown('gallery')">
+          <a class="animated-link" href="#" @click.prevent="toggleDropdown('gallery')">
+            Gallery
+            <svg class="w-6 h-6 ml-1 inline" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M5.293 9.293a1 1 0 011.414 0L10 12.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+          </a>
+          <ul class="absolute dropdown-menu bg-[#0d1422] text-white font-semibold mt-2 w-48 z-10" :class="{ 'show': activeDropdown === 'gallery' }">
+            <li><a class="block w-full px-4 py-2 hover:bg-[#1a2630] dropdown-animation" href="#" @click.prevent="navigateToGallery('section-4')">Prva Postava</a></li>
+            <li><a class="block w-full px-4 py-2 hover:bg-[#1a2630] dropdown-animation" href="#" @click.prevent="navigateToGallery('section-5')">Prvi Nastup</a></li>
+            <li><a class="block w-full px-4 py-2 hover:bg-[#1a2630] dropdown-animation" href="#" @click.prevent="navigateToGallery('section-3')">Tiraž Rasprodat</a></li>
+            <li><a class="block w-full px-4 py-2 hover:bg-[#1a2630] dropdown-animation" href="#" @click.prevent="navigateToGallery('section-1')">Section 1</a></li>
+            <li><a class="block w-full px-4 py-2 hover:bg-[#1a2630] dropdown-animation" href="#" @click.prevent="navigateToGallery('section-2')">Section 2</a></li>
+          </ul>
+        </li>
 
       <!-- Contact for Desktop -->
       <li class="relative">
@@ -77,6 +79,22 @@
         </ul>
       </li>
 
+      <!-- Albums with Dropdown for Mobile -->
+      <li>
+        <a class="block w-full px-4 py-2 flex justify-between items-center hover:bg-[#1a2630] animated-link"
+          href="#"
+          @click.prevent="toggleDropdown('albums')">
+          Albums
+          <svg class="w-6 h-6 ml-1 inline" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M5.293 9.293a1 1 0 011.414 0L10 12.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+          </svg>
+        </a>
+        <ul v-if="activeDropdown === 'albums'" class="pl-4">
+          <li><router-link class="block w-full px-4 py-2 hover:bg-[#1a2630] dropdown-animation" :to="{ name: 'AlbumInfo', params: { album: 'loraHolliday' } }">Lora Holliday</router-link></li>
+          <li><router-link class="block w-full px-4 py-2 hover:bg-[#1a2630] dropdown-animation" :to="{ name: 'AlbumInfo', params: { album: 'loraHollidayLive' } }">Lora Holliday LIVE</router-link></li>
+        </ul>
+      </li>
+
       <!-- Gallery with Dropdown for Mobile -->
       <li>
         <a class="block w-full px-4 py-2 flex justify-between items-center hover:bg-[#1a2630] animated-link"
@@ -92,23 +110,7 @@
           <li><a class="block w-full px-4 py-2 hover:bg-[#1a2630] dropdown-animation" href="#" @click.prevent="navigateToGallery('section-2')">Section 2</a></li>
         </ul>
       </li>
-
-      <!-- Albums with Dropdown for Mobile -->
-      <li>
-        <a class="block w-full px-4 py-2 flex justify-between items-center hover:bg-[#1a2630] animated-link"
-           href="#"
-           @click.prevent="toggleDropdown('albums')">
-          Albums
-          <svg class="w-6 h-6 ml-1 inline" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" d="M5.293 9.293a1 1 0 011.414 0L10 12.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-          </svg>
-        </a>
-        <ul v-if="activeDropdown === 'albums'" class="pl-4">
-          <li><router-link class="block w-full px-4 py-2 hover:bg-[#1a2630] dropdown-animation" :to="{ name: 'AlbumInfo', params: { album: 'loraHolliday' } }">Lora Holliday</router-link></li>
-          <li><router-link class="block w-full px-4 py-2 hover:bg-[#1a2630] dropdown-animation" :to="{ name: 'AlbumInfo', params: { album: 'loraHollidayLive' } }">Lora Holliday LIVE</router-link></li>
-        </ul>
-      </li>
-
+      
       <!-- Contact for Mobile -->
       <li><a class="block w-full px-4 py-2 hover:bg-[#1a2630] animated-link" href="#" @click.prevent="scrollToSection('contact')">Contact</a></li>
     </ul>
