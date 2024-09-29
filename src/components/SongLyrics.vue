@@ -1,53 +1,53 @@
 <template>
 	<div class="song-container">
-	  <div class="song-list">
-		<div
-		  v-for="(song, index) in songs"
-		  :key="index"
-		  class="song-title"
-		  @click="selectSong(index)"
-		>
-		  <h2
-			:class="{
-			  'active-title': selectedSong === index,
-			  'inactive-title': selectedSong !== index,
-			}"
-			class="text-lg font-bold pb-5 cursor-pointer"
-		  >
-			{{ song.title }}
-		  </h2>
-		</div>
-	  </div>
-  
-	  <div class="song-lyrics">
-		<div v-if="selectedSong !== null">
-		  <h2 class="text-3xl font-bold mb-4">{{ songs[selectedSong].title }}</h2>
-		  <div
-			class="lyrics-content"
-			:class="{'scrollable': songs[selectedSong].verses.length > 3}"
-		  >
+		<div class="song-list">
 			<div
-			  v-for="(verse, verseIndex) in songs[selectedSong].verses"
-			  :key="verseIndex"
-			  class="verse"
+				v-for="(song, index) in songs"
+				:key="index"
+				class="song-title"
+				@click="selectSong(index)"
 			>
-			  <p v-html="formatVerse(verse)"></p>
-			  <br />
+				<h2
+					:class="{
+						'active-title': selectedSong === index,
+						'inactive-title': selectedSong !== index,
+					}"
+					class="text-lg font-bold pb-5 cursor-pointer"
+				>
+					{{ song.title }}
+				</h2>
 			</div>
-		  </div>
 		</div>
-	  </div>
+
+		<div class="song-lyrics">
+			<div v-if="selectedSong !== null">
+				<h2 class="text-3xl font-bold mb-4">{{ songs[selectedSong].title }}</h2>
+				<div
+					class="lyrics-content"
+					:class="{ scrollable: songs[selectedSong].verses.length > 3 }"
+				>
+					<div
+						v-for="(verse, verseIndex) in songs[selectedSong].verses"
+						:key="verseIndex"
+						class="verse"
+					>
+						<p v-html="formatVerse(verse)"></p>
+						<br />
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
-  </template>
-  
-  <script lang="ts">
-  export default {
+</template>
+
+<script lang="ts">
+export default {
 	name: "SongLyrics",
 	data() {
-	  return {
-		selectedSong: 0,
-		songs: [
-		{
+		return {
+			selectedSong: 0,
+			songs: [
+				{
 					title: "1. BEBE",
 					verses: [
 						`Kad smo bili bebe, šezdeset i neke
@@ -306,7 +306,6 @@ Zvezde, Sunce, noć i dan.
 njenoj duši gospodar
 Tamo negde u visinama
 Nevidljiv među planinama.
-
 `,
 						`Imao sam zlatna krila
 Imao sam dugi plašt
@@ -320,81 +319,81 @@ A već sutra bićeš star.
 `,
 					],
 				},
-		],
-	  };
+			],
+		};
 	},
 	methods: {
-	  selectSong(index) {
-		this.selectedSong = index;
-	  },
-	  formatVerse(verse: string) {
-		return verse.replace(/\n/g, "<br />");
-	  },
+		selectSong(index) {
+			this.selectedSong = index;
+		},
+		formatVerse(verse: string) {
+			return verse.replace(/\n/g, "<br />");
+		},
 	},
-  };
-  </script>
-  
-  <style scoped>
-  .song-container {
+};
+</script>
+
+<style scoped>
+.song-container {
 	display: grid;
-	grid-template-columns: 1fr 3fr; 
+	grid-template-columns: 1fr 3fr;
 	gap: 2rem;
 	padding: 20px;
-  }
-  
-  .song-list {
+}
+
+.song-list {
 	border-right: 1px solid #ccc;
 	padding-right: 20px;
-  }
-  
-  .song-title {
+}
+
+.song-title {
 	cursor: pointer;
-  }
-  
-  .active-title {
+}
+
+.active-title {
 	color: var(--color-highlight);
-  }
-  
-  .inactive-title {
+}
+
+.inactive-title {
 	color: white;
-  }
-  
-  .song-title:hover {
+}
+
+.song-title:hover {
 	color: var(--color-highlight-hover);
-  }
-  
-  .song-lyrics {
+}
+
+.song-lyrics {
 	padding-left: 20px;
 	color: white;
-  }
-  
-  .lyrics-content {
-	max-height: 300px; 
+}
+
+.lyrics-content {
+	max-height: 300px;
 	overflow-y: auto;
-  }
-  
-  .scrollable {
-	max-height: 450px; 
+}
+
+.scrollable {
+	max-height: 450px;
 	overflow-y: auto;
-  }
-  
-  .verse p {
-	font-size: 1.25rem; 
+}
+
+.verse p {
+	font-size: 1.25rem;
 	line-height: 1.6;
-  }
-  
-  @media (max-width: 640px) {
+}
+
+@media (max-width: 640px) {
 	.song-container {
-	  grid-template-columns: 1fr;
+		grid-template-columns: 1fr;
 	}
-  
+
 	.song-list {
-	  border-right: none;
-	  padding-right: 0;
+		border-right: none;
+		padding-right: 0;
 	}
-  
+
 	.song-lyrics {
-	  padding-left: 0;
+		padding-left: 0;
 	}
-  }
-  </style>
+}
+</style>
