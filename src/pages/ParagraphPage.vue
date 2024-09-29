@@ -32,6 +32,7 @@ import TirazRasprodatImage from "@/assets/img/TirazRasprodat_MainPic.jpg";
 import PiraterijaIPiratstvo from "@/assets/img/PiraterijaIPiratstvo_MainPic.jpg";
 import PrviNastup from "@/assets/img/PrviNastup_main.png";
 import PrvaPostava from "@/assets/img/PrvaPostava_main.png";
+import TvRadioIStampa from "@/assets/img/TvRadioIStampa_MAIN.jpg";
 
 export default {
 	name: "ParagraphPage",
@@ -90,10 +91,10 @@ export default {
 				7: {
 					title: "TV, radio i štampa",
 					content: `Kao izdanje za PGP RTS, urađena je efektna marketinška kampanja 1994. godine sa reklamnim TV i radijskim spotom za ploču grupe “PIRATI” “Lora Holliday”. Snimke i spotove grupe sa ovog albuma emitovale su sve radio i televizijske stanice u tadašnjem sistemu RTS, “Politika”, privatne radio i TV stanice, kao i radio i TV stanice van naše zemlje. 
-U kontekstu promocije grupe “Pirati” i studijskog izdanja “Lora Holliday” urađena su četiri režirana studijska spota (tri je uradio Slaviša Grujić) za pesme “180/120”, “Očemu misliš dok sklapaš oči”, “Sanjao sam da sam car” i Bosiljka Šiđanin za pesmu“Lora Holliday”. 
+U kontekstu promocije grupe “Pirati” i studijskog izdanja “Lora Holliday” urađena su četiri režirana studijska spota (tri je uradio Slaviša Grujić) za pesme “180/120”, “Očemu misliš dok sklapaš oči”, “Sanjao sam da sam car” i Bosiljka Šiđanin za pesmu “Lora Holliday”. 
 Zabeleženi su brojni TV nastupi na RTS koji su se reprizno emitovali više puta. Snimljena je emisija “TV portret” (Peđa Vranješević) sa vođom grupe Đ. Jovanovićem, koja je bila takođe više puta reprizirana. Realizovana su i brojna predstavljanja albuma grupe na radio stanicama u živim emisijama kao i tekstovi u štampi.
 `,
-					image: "https://i.imgur.com/7o6gXKY.png",
+					image: TvRadioIStampa,
 				},
 			};
 
@@ -198,5 +199,6 @@ Zabeleženi su brojni TV nastupi na RTS koji su se reprizno emitovali više puta
 	line-height: 1.6;
 	max-width: 700px;
 	margin: 0 auto;
+	text-align: left;
 }
 </style>
