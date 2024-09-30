@@ -60,6 +60,7 @@ import PiraterijaIPiratstvo from "@/assets/img/PiraterijaIPiratstvo_MainPic.jpg"
 import PrviNastup from "@/assets/img/PrviNastup_main.png";
 import PrvaPostava from "@/assets/img/PrvaPostava_main.png";
 import TvRadioIStampa from "@/assets/img/TvRadioIStampa_MAIN.jpg";
+import MuzickaOrijentacijaIImidz from "@/assets/img/MuzickaOrijentacijaIImidz_main.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -87,7 +88,7 @@ export default {
 				{ content: PrviNastup },
 				{ content: "https://i.imgur.com/7o6gXKY.png" },
 				{ content: TirazRasprodatImage },
-				{ content: TirazRasprodatImage },
+				{ content: MuzickaOrijentacijaIImidz },
 				{ content: TvRadioIStampa },
 			],
 			paragraphs: [
