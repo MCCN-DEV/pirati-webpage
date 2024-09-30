@@ -33,6 +33,8 @@ import PiraterijaIPiratstvo from "@/assets/img/PiraterijaIPiratstvo_MainPic.jpg"
 import PrviNastup from "@/assets/img/PrviNastup_main.png";
 import PrvaPostava from "@/assets/img/PrvaPostava_main.png";
 import TvRadioIStampa from "@/assets/img/TvRadioIStampa_MAIN.jpg";
+import MuzickaOrijentacijaIImidz from "@/assets/img/MuzickaOrijentacijaIImidz_main.png";
+
 
 export default {
 	name: "ParagraphPage",
@@ -86,7 +88,7 @@ export default {
 					title: "Muzička orijentacija i imidž",
 					content:
 						"Zvuk grupe je na početku više bio rok orijentacije a nakon snimanja studijskog albuma je “omekšao” u pop-rok. Osnovni zvuk grupe je (jednim delom) zavisio i od muzičara koji su činili aktuenu postavu ali je i kasnija osnova zvuka grupe “Pirati” ostala pop-rok.Vizuelna pojavnost grupe je bila u skladu sa ovakvom muzičkom orijentacijom, što je u vreme kada je grupa radila (ratovi u bivšoj SFRJ, embargo i dr.) bilo veoma retko, pa je grupa “PIRATI” na taj način bila skoro jedina grupa u tom trenutku kod nas sa ovakvim imidžom.",
-					image: "https://i.imgur.com/7o6gXKY.png",
+					image: MuzickaOrijentacijaIImidz,
 				},
 				7: {
 					title: "TV, radio i štampa",
