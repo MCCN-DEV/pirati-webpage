@@ -15,7 +15,7 @@
 					class="paragraph-image"
 				/>
 				<p class="paragraph-text">
-					{{ paragraphContent }}
+					<span v-html="formatText(paragraphContent)"> </span>
 				</p>
 			</div>
 		</main>
@@ -34,7 +34,7 @@ import PrviNastup from "@/assets/img/PrviNastup_main.png";
 import PrvaPostava from "@/assets/img/PrvaPostava_main.png";
 import TvRadioIStampa from "@/assets/img/TvRadioIStampa_MAIN.jpg";
 import MuzickaOrijentacijaIImidz from "@/assets/img/MuzickaOrijentacijaIImidz_main.png";
-
+import PersonalnePromene from "@/assets/img/PersonalnePromene_main.jpg";
 
 export default {
 	name: "ParagraphPage",
@@ -83,7 +83,6 @@ export default {
 					content: `Album “Lora Holliday” grupe “PIRATI” je izdat za PGP RTS juna 1994. godine. Tiraž je bio rasprodat - oko 5000 kaseta i LP ploča (uglavnom za radio stanice).`,
 					image: TirazRasprodatImage,
 				},
-				//[HERE]
 				6: {
 					title: "Muzička orijentacija i imidž",
 					content:
@@ -92,11 +91,28 @@ export default {
 				},
 				7: {
 					title: "TV, radio i štampa",
-					content: `Kao izdanje za PGP RTS, urađena je efektna marketinška kampanja 1994. godine sa reklamnim TV i radijskim spotom za ploču grupe “PIRATI” “Lora Holliday”. Snimke i spotove grupe sa ovog albuma emitovale su sve radio i televizijske stanice u tadašnjem sistemu RTS, “Politika”, privatne radio i TV stanice, kao i radio i TV stanice van naše zemlje. 
-U kontekstu promocije grupe “Pirati” i studijskog izdanja “Lora Holliday” urađena su četiri režirana studijska spota (tri je uradio Slaviša Grujić) za pesme “180/120”, “Očemu misliš dok sklapaš oči”, “Sanjao sam da sam car” i Bosiljka Šiđanin za pesmu “Lora Holliday”. 
+					content: `Kao izdanje za PGP RTS, urađena je efektna marketinška kampanja 1994. godine sa reklamnim TV i radijskim spotom za ploču grupe “PIRATI” “Lora Holliday”. Snimke i spotove grupe sa ovog albuma emitovale su sve radio i televizijske stanice u tadašnjem sistemu RTS, “Politika”, privatne radio i TV stanice, kao i radio i TV stanice van naše zemlje.
+U kontekstu promocije grupe “Pirati” i studijskog izdanja “Lora Holliday” urađena su četiri režirana studijska spota (tri je uradio Slaviša Grujić) za pesme “180/120”, “Očemu misliš dok sklapaš oči”, “Sanjao sam da sam car” i Bosiljka Šiđanin za pesmu “Lora Holliday”.
 Zabeleženi su brojni TV nastupi na RTS koji su se reprizno emitovali više puta. Snimljena je emisija “TV portret” (Peđa Vranješević) sa vođom grupe Đ. Jovanovićem, koja je bila takođe više puta reprizirana. Realizovana su i brojna predstavljanja albuma grupe na radio stanicama u živim emisijama kao i tekstovi u štampi.
 `,
 					image: TvRadioIStampa,
+				},
+				8: {
+					title: "Personalne Promene",
+					content: `• Đorđe Jovanović - gitarista, aranžer i autor pesama grupe “PIRATI”. Član grupe u aktivnom periodu rada od 1988.-1995. godine.
+• Dragan Nikolić - pevač grupe “PIRATI”. Član grupe u aktivnom periodu rada od 1988.-1995. godine.
+• Cikora Zoltan - bubnjar u prvoj postavi grupe “PIRATI” iz 1988. godine. Učestvovao u snimanju albuma “Lora Holliday” 1993. godine. Član grupe do 1995. godine.
+• Darko Matić - basista u prvoj postavi grupe “PIRATI” iz 1988. godine. Učestvovao u snimanju albuma “Lora Holliday” 1993. godine.
+• Zoran Veselinović - gitarista grupe 1988.-1991. godine.
+• Zoran Cvetinović - gitarista i član grupe od 1994.-1995. godine.
+• Vladimir Samardžić - basista i član grupe od 1994.-1995. godine.
+• Dušan Šević - klavijaturista i član grupe od 1994.-1995. godine.
+• Vlada Dozet - bubnjar i član grupe od 1995. godine.
+• Bojan Vranac - klavijaturista i član grupe od 1995. godine do prestanka rada.
+• Obrad Laćarac - basista i član grupe od 1995. godine.
+• Pavle Georgijević - gitarista i član grupe od 1995. godine.
+`,
+					image: PersonalnePromene,
 				},
 			};
 
@@ -143,6 +159,9 @@ Zabeleženi su brojni TV nastupi na RTS koji su se reprizno emitovali više puta
 					delay: 0.5,
 				}
 			);
+		},
+		formatText(verse) {
+			return verse.replace(/\n/g, "<br />");
 		},
 	},
 };

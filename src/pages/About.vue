@@ -35,7 +35,7 @@
 					<p
 						class="mb-4 centered-paragraph about-paragraph letter-animation flex-1"
 					>
-						{{ paragraph.content }}
+						<span v-html="formatText(paragraph.content)"></span>
 						<a
 							v-if="paragraph.content.length > 250"
 							:href="'/paragraph/' + (index + 1)"
@@ -61,6 +61,7 @@ import PrviNastup from "@/assets/img/PrviNastup_main.png";
 import PrvaPostava from "@/assets/img/PrvaPostava_main.png";
 import TvRadioIStampa from "@/assets/img/TvRadioIStampa_MAIN.jpg";
 import MuzickaOrijentacijaIImidz from "@/assets/img/MuzickaOrijentacijaIImidz_main.png";
+import PersonalnePromene from "@/assets/img/PersonalnePromene_main.jpg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -81,6 +82,7 @@ export default {
 				{ content: `Tiraž Rasprodat` },
 				{ content: `Muzička orijentacija i imidž` },
 				{ content: `TV, radio i štampa` },
+				{ content: `Personalne Promene` },
 			],
 			images: [
 				{ content: PiraterijaIPiratstvo },
@@ -90,6 +92,7 @@ export default {
 				{ content: TirazRasprodatImage },
 				{ content: MuzickaOrijentacijaIImidz },
 				{ content: TvRadioIStampa },
+				{ content: PersonalnePromene },
 			],
 			paragraphs: [
 				{
@@ -114,6 +117,21 @@ export default {
 					content: `Kao izdanje za PGP RTS, urađena je efektna marketinška kampanja 1994. godine sa reklamnim TV i radijskim spotom za ploču grupe “PIRATI” “Lora Holliday”. Snimke i spotove grupe sa ovog albuma emitovale su sve radio i televizijske stanice u tadašnjem sistemu RTS, “Politika”, privatne radio i TV stanice, kao i radio i TV stanice van naše zemlje. 
 U kontekstu promocije grupe “Pirati” i studijskog izdanja “Lora Holliday” urađena su četiri režirana studijska spota (tri je uradio Slaviša Grujić) za pesme “180/120”, “Očemu misliš dok sklapaš oči”, “Sanjao sam da sam car” i Bosiljka Šiđanin za pesmu “Lora Holliday”. 
 Zabeleženi su brojni TV nastupi na RTS koji su se reprizno emitovali više puta. Snimljena je emisija “TV portret” (Peđa Vranješević) sa vođom grupe Đ. Jovanovićem, koja je bila takođe više puta reprizirana. Realizovana su i brojna predstavljanja albuma grupe na radio stanicama u živim emisijama kao i tekstovi u štampi.
+`,
+				},
+				{
+					content: `• Đorđe Jovanović - gitarista, aranžer i autor pesama grupe “PIRATI”. Član grupe u aktivnom periodu rada od 1988-1995 godine.
+• Dragan Nikolić - pevač grupe “PIRATI”. Član grupe u aktivnom periodu rada od 1988-1995 godine.
+• Cikora Zoltan - bubnjar u prvoj postavi grupe “PIRATI” iz 1988. godine. Učestvovao u snimanju albuma “Lora Holliday” 1993. godine. Član grupe do 1995. godine.
+• Darko Matić - basista u prvoj postavi grupe “PIRATI” iz 1988. godine. Učestvovao u snimanju albuma “Lora Holliday” 1993. godine.
+• Zoran Veselinović - gitarista grupe 1988-1991. godine.
+• Zoran Cvetinović - gitarista i član grupe od 1994.-1995. godine.
+• Vladimir Samardžić - basista i član grupe od 1994.-1995. godine.
+• Dušan Šević - klavijaturista i član grupe od 1994.-1995. godine. 
+• Vlada Dozet - bubnjar i član grupe od 1995. godine.
+• Bojan Vranac - klavijaturista i član grupe od 1995. godine do prestanka rada.
+• Obrad Laćarac - basista i član grupe od 1995. godine.
+• Pavle Georgijević - gitarista i član grupe od 1995. godine.
 `,
 				},
 			],
@@ -200,6 +218,9 @@ Zabeleženi su brojni TV nastupi na RTS koji su se reprizno emitovali više puta
 					}
 				);
 			});
+		},
+		formatText(verse) {
+			return verse.replace(/\n/g, "<br />");
 		},
 	},
 };

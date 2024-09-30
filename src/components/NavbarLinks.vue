@@ -89,6 +89,13 @@
 							>TV, radio i štampa</a
 						>
 					</li>
+					<li>
+						<a
+							class="block w-full px-4 py-2 hover:bg-[#1a2630] dropdown-animation"
+							href="/paragraph/8"
+							>Personalne Promene</a
+						>
+					</li>
 				</ul>
 			</li>
 
@@ -358,6 +365,13 @@
 							>TV, radio i štampa</a
 						>
 					</li>
+					<li>
+						<a
+							class="block w-full px-4 py-2 hover:bg-[#1a2630] dropdown-animation"
+							href="/paragraph/8"
+							>Personalne Promene</a
+						>
+					</li>
 				</ul>
 			</li>
 
@@ -445,7 +459,7 @@
 					</svg>
 				</a>
 			</li>
-      
+
 			<!-- Gallery with Dropdown for Mobile -->
 			<li>
 				<a
