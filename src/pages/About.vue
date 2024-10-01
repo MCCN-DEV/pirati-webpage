@@ -59,7 +59,7 @@ import TirazRasprodatImage from "@/assets/img/TirazRasprodat_MainPic.jpg";
 import PiraterijaIPiratstvo from "@/assets/img/PiraterijaIPiratstvo_MainPic.jpg";
 import PrviNastup from "@/assets/img/PrviNastup_main.png";
 import PrvaPostava from "@/assets/img/PrvaPostava_main.png";
-import TvRadioIStampa from "@/assets/img/TvRadioIStampa_MAIN.jpg";
+import TvRadioIStampa from "@/assets/img/TvRadioIStampa_MAIN.png";
 import MuzickaOrijentacijaIImidz from "@/assets/img/MuzickaOrijentacijaIImidz_main.png";
 import PersonalnePromene from "@/assets/img/PersonalnePromene_main.jpg";
 
