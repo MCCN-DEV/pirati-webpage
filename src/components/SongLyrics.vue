@@ -40,7 +40,7 @@
 	</div>
 </template>
 
-<script lang="ts">
+<script>
 import loraHollidayLyrics from "@/assets/Data/loraHollidayLyrics.json";
 
 export default {
@@ -55,7 +55,7 @@ export default {
 		selectSong(index) {
 			this.selectedSong = index;
 		},
-		formatVerse(verse: string) {
+		formatVerse(verse) {
 			return verse.replace(/\n/g, "<br />");
 		},
 	},
