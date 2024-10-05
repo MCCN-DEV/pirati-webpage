@@ -116,8 +116,9 @@ export default {
 
 		const exploreTexts = {
 			loraHolliday:
+				'PIRATI "Lora Holliday" (First concert, Wine party - Kisač, 1988) LIVE',
+			loraHollidayLive:
 				"PIRATI “LORA HOLLIDAY“, 1994. Izdanje PGP RTS - kaseta i LP",
-			loraHollidayLive: 'PIRATI "Lora Holliday"',
 		};
 
 		return {
