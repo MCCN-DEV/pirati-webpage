@@ -62,7 +62,7 @@
 						</div>
 					</div>
 					<div class="lg:w-2/3 lg:pl-8 text-white">
-						<p class="text-lg text-white">{{ exploreText }}</p>
+						<p class="text-3xl text-white">{{ exploreText }}</p>
 					</div>
 				</div>
 			</section>
@@ -116,9 +116,8 @@ export default {
 
 		const exploreTexts = {
 			loraHolliday:
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
-			loraHollidayLive:
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+				"PIRATI “LORA HOLLIDAY“, 1994. Izdanje PGP RTS - kaseta i LP",
+			loraHollidayLive: 'PIRATI "Lora Holliday"',
 		};
 
 		return {
