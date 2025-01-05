@@ -42,14 +42,54 @@
         </div>
       </div>
     </main>
+    <div class="half-circle" @click="redirectToPage()">
+      <a href="https://music.youtube.com/search?q=pirati+lora+holliday" class="svg-icon">
+        <img src="@/assets/svg/youtube.svg" alt="YouTube" class="w-6 h-6"/>
+      </a>
+    </div>
   </div>
 </template>
 <script setup lang="ts">
 import Navbar from "@/components/Navbar.vue";
 import YoutubeVideo from "@/components/VideoComponent.vue";
+
+function redirectToPage() {
+  window.location.href = 'https://music.youtube.com/search?q=pirati+lora+holliday';
+}
 </script>
 
 <style scoped>
+.half-circle {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 50px;
+  background-color: var(--color-highlight);
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.svg-icon {
+  display: block;
+  text-decoration: none;
+}
+
+img {
+  width: 40px;
+  height: 40px;
+}
+
+.half-circle:hover {
+  transform: translateX(-50%) scale(1.5);
+}
+
 /*Don't remove this class*/
 .h-screen {
   height: 10vh;
