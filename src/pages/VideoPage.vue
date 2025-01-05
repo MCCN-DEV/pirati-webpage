@@ -43,9 +43,7 @@
       </div>
     </main>
     <div class="half-circle" @click="redirectToPage()">
-      <a href="https://music.youtube.com/search?q=pirati+lora+holliday" class="svg-icon">
-        <img src="@/assets/svg/youtube.svg" alt="YouTube" class="w-6 h-6"/>
-      </a>
+      <img src="@/assets/svg/youtube.svg" alt="YouTube" class="w-6 h-6 svg-icon"/>
     </div>
   </div>
 </template>
@@ -54,7 +52,7 @@ import Navbar from "@/components/Navbar.vue";
 import YoutubeVideo from "@/components/VideoComponent.vue";
 
 function redirectToPage() {
-  window.location.href = 'https://music.youtube.com/search?q=pirati+lora+holliday';
+  window.open('https://music.youtube.com/browse/UCe1WLkwXx7v3lgM7ziqp5qw', '_blank');
 }
 </script>
 
