@@ -213,7 +213,7 @@
 
       <!-- Video -->
       <li>
-        <a class="block w-full px-4 py-2 flex justify-between items-center hover:bg-[#1a2630] animated-link" href="#" @click.prevent="toggleDropdown('Video')">Video</a>
+        <a class="block w-full px-4 py-2 flex justify-between items-center hover:bg-[#1a2630] animated-link" href="/video" >Video</a>
       </li>
 
       <!-- Gallery with Dropdown for Mobile -->
