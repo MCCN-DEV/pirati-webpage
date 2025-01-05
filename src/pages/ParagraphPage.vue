@@ -70,7 +70,7 @@ export default {
 				},
 				3: {
 					title: "Prvi Nastup Grupe",
-					content: `Prvi nastup grupe “PIRATI” je bio na “Danima vina” u Kisaču 1998. godine. Svirala je prva postava grupe. Sa ovog nastupa je 5 pesama skinuto sa VHS kasete i objavljeno kao "PIRATI Lora Holliday (First concert, Wine party - Kisač, 1988) LIVE", kao sopstveno izdanje na muzičkim platformama.`,
+					content: `Prvi nastup grupe “PIRATI” je bio na “Danima vina” u Kisaču 1988. godine. Svirala je prva postava grupe. Sa ovog nastupa je 5 pesama skinuto sa VHS kasete i objavljeno kao "PIRATI Lora Holliday (First concert, Wine party - Kisač, 1988) LIVE", kao sopstveno izdanje na muzičkim platformama.`,
 					image: PrviNastup,
 				},
 				4: {
