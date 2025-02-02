@@ -3,7 +3,7 @@
     <h1 class="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold uppercase tracking-wide mb-4 pirati-title">
       <h2 v-for="(char, index) in 'Grupa'" :key="index" class="char">{{ char }}</h2>
       <span>&nbsp</span>
-      <h1 v-for="(char, index) in 'Pirati'" :key="index" class="char">{{   char }}</h1>
+      <h1 v-for="(char, index) in 'Pirati'" :key="index" class="char">{{ char }}</h1>
     </h1>
     <p class="text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed paragraph-text">
       <p style="font-size: 40px;">JEDINI "PIRATI" KOJI SU ORIGINAL!</p>
