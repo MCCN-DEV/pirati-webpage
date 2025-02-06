@@ -83,13 +83,32 @@ export default {
 					content: `Album “Lora Holliday” grupe “PIRATI” je izdat za PGP RTS juna 1994. godine. Tiraž je bio rasprodat - oko 5000 kaseta i LP ploča (uglavnom za radio stanice).`,
 					image: TirazRasprodatImage,
 				},
-				6: {
+        6: {
+          title: "Studijsko snimanje",
+          content: `Snimanje LP "LORA HOLLIDAY" PGP RTS (1994) je realizovano u Studiju 1 Radio Novi Sad, tokom leta i jeseni 1993. godine.
+          Ploču realizovali:
+          Đorđe Jovanović, Aleksandar Januzović, Miroslav Ilić, Zoran Mraković i Rade Ćirić - električne i akustične gitare
+          Darko Matić, Dušan Ševarlić - bas
+          Cikora Zoltan - bubnjevi i udaraljke
+          Aleksandar Dujin - klavijature, ritam mašina
+          Deže Molnar - saksofoni, klarinet
+          Dragan Nikolić - vokal
+          Tanja Jovićević - prateći vokal
+          Producent: Deže Molnar
+          Ton majstor: Jan Šaš
+          Asistent: Mirko Kovač
+          Naslovna strana: Maraš Nenad VIII3
+          Grafičko rešenje: Cikora Zoltan i Đorđe Jovanović
+          Odgovorni urednik: Dragan Ilić Direktor: Đorđe Ninkov Radio Televizija Srbije, Produkcija gramofonskih ploča (PGP), 11000 Beograd, Jugoslavija STEREO 211881 SOKOJ 1994`,
+          image: "https://i.imgur.com/EbV0ECW.png",
+        },
+				7: {
 					title: "Muzička orijentacija i imidž",
 					content:
 						"Zvuk grupe je na početku više bio rok orijentacije a nakon snimanja studijskog albuma je “omekšao” u pop-rok. Osnovni zvuk grupe je (jednim delom) zavisio i od muzičara koji su činili aktuenu postavu ali je i kasnija osnova zvuka grupe “Pirati” ostala pop-rok.Vizuelna pojavnost grupe je bila u skladu sa ovakvom muzičkom orijentacijom, što je u vreme kada je grupa radila (ratovi u bivšoj SFRJ, embargo i dr.) bilo veoma retko, pa je grupa “PIRATI” na taj način bila skoro jedina grupa u tom trenutku kod nas sa ovakvim imidžom.",
 					image: MuzickaOrijentacijaIImidz,
 				},
-				7: {
+				8: {
 					title: "TV, radio i štampa",
 					content: `Kao izdanje za PGP RTS, urađena je efektna marketinška kampanja 1994. godine sa reklamnim TV i radijskim spotom za ploču grupe “PIRATI” “Lora Holliday”. Snimke i spotove grupe sa ovog albuma emitovale su sve radio i televizijske stanice u tadašnjem sistemu RTS, “Politika”, privatne radio i TV stanice, kao i radio i TV stanice van naše zemlje.
 U kontekstu promocije grupe “Pirati” i studijskog izdanja “Lora Holliday” urađena su četiri režirana studijska spota (tri je uradio Slaviša Grujić) za pesme “180/120”, “Očemu misliš dok sklapaš oči”, “Sanjao sam da sam car” i Bosiljka Šiđanin za pesmu “Lora Holliday”.
@@ -97,7 +116,7 @@ Zabeleženi su brojni TV nastupi na RTS koji su se reprizno emitovali više puta
 `,
 					image: TvRadioIStampa,
 				},
-				8: {
+				9: {
 					title: "Personalne Promene",
 					content: `• Đorđe Jovanović - gitarista, aranžer i autor pesama grupe “PIRATI”. Član grupe u aktivnom periodu rada od 1988.-1995. godine.
 • Dragan Nikolić - pevač grupe “PIRATI”. Član grupe u aktivnom periodu rada od 1988.-1995. godine.
@@ -115,7 +134,6 @@ Zabeleženi su brojni TV nastupi na RTS koji su se reprizno emitovali više puta
 					image: PersonalnePromene,
 				},
 			};
-
 			const data = paragraphs[paragraphId] || {
 				title: "Content not found.",
 				content: "Content not found.",
