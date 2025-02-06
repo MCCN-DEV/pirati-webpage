@@ -29,10 +29,10 @@
             <a class="block w-full px-4 py-2 hover:bg-[#1a2630] dropdown-animation" href="/paragraph/4">Potpisivanje Ugovora</a>
           </li>
           <li>
-            <a class="block w-full px-4 py-2 hover:bg-[#1a2630] dropdown-animation" href="/paragraph/5">Tiraž Rasprodat</a>
+            <a class="block w-full px-4 py-2 hover:bg-[#1a2630] dropdown-animation" href="/paragraph/5">Studijsko Snimanje</a>
           </li>
           <li>
-            <a class="block w-full px-4 py-2 hover:bg-[#1a2630] dropdown-animation" href="/paragraph/6">Studijsko Snimanje</a>
+            <a class="block w-full px-4 py-2 hover:bg-[#1a2630] dropdown-animation" href="/paragraph/6">Tiraž Rasprodat</a>
           </li>
           <li>
             <a class="block w-full px-4 py-2 hover:bg-[#1a2630] dropdown-animation" href="/paragraph/7">Muzička orijentacija i imidž</a>
@@ -164,10 +164,10 @@
             <a class="block w-full px-4 py-2 hover:bg-[#1a2630] dropdown-animation" href="/paragraph/4">Potpisivanje Ugovora</a>
           </li>
           <li>
-            <a class="block w-full px-4 py-2 hover:bg-[#1a2630] dropdown-animation" href="/paragraph/5">Tiraž Rasprodat</a>
+            <a class="block w-full px-4 py-2 hover:bg-[#1a2630] dropdown-animation" href="/paragraph/5">Studijsko Snimanje</a>
           </li>
           <li>
-            <a class="block w-full px-4 py-2 hover:bg-[#1a2630] dropdown-animation" href="/paragraph/6">Studijsko Snimanje</a>
+            <a class="block w-full px-4 py-2 hover:bg-[#1a2630] dropdown-animation" href="/paragraph/6">Tiraž Rasprodat</a>
           </li>
           <li>
             <a class="block w-full px-4 py-2 hover:bg-[#1a2630] dropdown-animation" href="/paragraph/7">Muzička orijentacija i imidž</a>

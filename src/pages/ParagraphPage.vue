@@ -78,12 +78,12 @@ export default {
 					content: `Đorđe Jovanović je u ime grupe “PIRATI” potpisao ugovor o ekskluzivnom snimanju originalnog muzičkog materijala grupe za Radio Novi Sad 1992. godine. Tokom leta i jeseni 1993. godine u studiju 1 RNS, snimljeno je ukupno dvanaest pesama. Snimatelj je bio Jan Šaš, producent i duvački instrumenti, Deže Molnar, deo aranžmana i klavijature uradio je Aleksandar Dujin, prateći vokali Tanja Jovićević, Januzović Aleksandar – Jana je odsvirao jedan deo gitara, Đorđe Jovanović je odsvirao jedan deo gitara, Rade Ćirić je odsvirao klasičnu gitaru u jednoj pesmi, Darko Matić i Dušan Ševarlić su svirali bas, itd. Sve pesme je otpevao pevač grupe Dragan Nikolić. Od dvanaest snimljenih, odabrano je deset autorskih pesama za budući album “Lora Holliday” koji je izdat za PGP RTS juna 1994. Snimanje je vršeno i za potrebe RTV i dečije emisije “Muzički tobogan”, pesma “Život nije kao balet” LINK.`,
 					image: "https://i.imgur.com/7o6gXKY.png",
 				},
-				5: {
+				6: {
 					title: "Tiraž Rasprodat",
 					content: `Album “Lora Holliday” grupe “PIRATI” je izdat za PGP RTS juna 1994. godine. Tiraž je bio rasprodat - oko 5000 kaseta i LP ploča (uglavnom za radio stanice).`,
 					image: TirazRasprodatImage,
 				},
-        6: {
+        5: {
           title: "Studijsko snimanje",
           content: `Snimanje LP "LORA HOLLIDAY" PGP RTS (1994) je realizovano u Studiju 1 Radio Novi Sad, tokom leta i jeseni 1993. godine.
           Ploču realizovali:
